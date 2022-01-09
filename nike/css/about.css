@@ -1,0 +1,447 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a { text-decoration: none; color: inherit;}
+
+body {overflow-x: hidden;}
+body > div {overflow: hidden;}
+
+body, html { font-family: 'S-CoreDream-4Regular'; color: #222222; box-sizing: border-box;
+     width: 100%; height: 100%;  background: #f6f6f6;}
+
+
+/* move */
+
+.mission p:nth-of-type(1).move,
+.mission p:nth-of-type(2).move,
+.mission p:nth-of-type(3).move,
+.mission .img_bx .blind.move,
+.aboutnike p:nth-of-type(1).move,
+.aboutnike p:nth-of-type(2).move,
+.box .innovation.move,
+.box .team.move,
+.box .social.move,
+.box .sustainable.move,
+.head .world.move,
+.head .europe.move,
+.head .china.move
+{transform: translate(0,0); opacity: 1;}
+
+.mission p:nth-of-type(1).move span {color: #64ae87; transition-delay: 1s;}
+.mission p:nth-of-type(1).move span::after {transform:scale(1); transition-delay: 1.3s;}
+
+
+.aboutnike.before::before {transform: translate(0, 0);}
+.aboutnike.after::after {transform: translate(0, 0);}
+
+
+
+/* logo, menu icon, nav */
+
+.logo { position: fixed; top: 2%; left: 2%; height:3%; transition-duration: 0.5s;cursor: pointer; z-index: 90; opacity: 1;}
+.logo.black { opacity: 0;}
+.menu {width: 40px; height: 30px; display: block; position: fixed; top: 2%; right: 2%; z-index: 99; opacity: 0.5; transition-duration: 200ms;}
+.menu > span {display: block; transition-duration: 0.5s; border-radius: 4px; width: 100%; height: 6px; background: #fff; position: absolute; top: 50%; transform: translateY(-50%);}
+.menu > span::after, .menu > span::before {display: block; transition-duration: 0.5s; border-radius: 4px; content: ""; width: 100%; height: 6px; position: absolute; top: 0; background: #fff;}
+.menu > span::after {top: 12px;}
+.menu > span::before {top: -12px;}
+.menu:hover {opacity: 1;} 
+.menu.black > span {background: #222;}
+.menu.black > span::before {background: #222;}
+.menu.black > span::after {background: #222;}
+.menu.on > span {background: transparent;}
+.menu.on > span::before {top: 0; transform: rotate(45deg); background: #222; }
+.menu.on > span::after {top: 0; transform: rotate(-45deg); background: #222; }
+
+.nav {position: fixed; z-index: 95; top: 0; min-width: 300px; width: 30%; height: 100%; right: -100%; background: #ffffff; overflow: hidden; transition-duration: 0.6s;}
+.nav.on {right: 0;}
+
+.nav > ul { position: relative; top: 50%; width: 100%; transform: translateY(-50%);}
+.nav > ul > li {position: relative; text-align: left; padding-left: 7%; width: 100%; font-size: 40px; height: 70px; line-height: 70px; font-weight: bold; transition: 300ms;}
+.nav > ul > li:hover {letter-spacing: 10px; background-color: #222; color: #fff;}
+
+
+/* main */
+
+.main {width: 100%; height: 100%; position: relative; overflow: hidden;
+background-image: url(../images/about-main.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;}
+.main .overlay {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.3);}
+.main svg {position: absolute; z-index: 1; width: 65%; stroke: #fff; left: 50%; transform: translateX(-50%); bottom: 10%;}
+.main svg path {stroke: #fff; stroke-width: 2px;}
+
+
+/* mission */
+
+.mission {position: relative; padding: 10% 0;}
+.mission #missionsvg {width: 30%; margin-left: 35%; margin-bottom: 7%;}
+.mission #missionsvg path {stroke: #222; stroke-width: 2px;}
+.mission #missionsvg .path400 {stroke-dasharray: 400; stroke-dashoffset: 400;}
+.mission #missionsvg .path720 {stroke-dasharray: 720; stroke-dashoffset: 720;}
+.mission #missionsvg .path900 {stroke-dasharray: 900; stroke-dashoffset: 900;}
+.mission #missionsvg.move .path400 {animation: ani-path400 1.5s linear forwards;}
+.mission #missionsvg.move .path720 {animation: ani-path720 1.5s linear forwards;}
+.mission #missionsvg.move .path900 {animation: ani-path900 1.5s linear forwards;}
+@keyframes ani-path400 {
+    0% {stroke-dashoffset: 400;}
+    50% {stroke-dashoffset: 200;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes ani-path720 {
+    0% {stroke-dashoffset: 720;}
+    50% {stroke-dashoffset: 360;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes ani-path900 {
+    0% {stroke-dashoffset: 900;}
+    50% {stroke-dashoffset: 450;}
+    100% {stroke-dashoffset: 0;}
+}
+.mission p {width: 100%; text-align: center; text-transform: uppercase; font-size: 3rem; line-height: 3.5rem; transform: translate(0, 100%); opacity: 0; transition: all 1s;}
+.mission p:nth-of-type(2) {transition-delay: 0.3s;}
+.mission p:nth-of-type(3) {font-size: 2rem; margin-top: 5%; margin-bottom: 10%; transform: translate(0, 100%); opacity: 0; transition: all 1s;}
+.mission p span {position: relative; transition: 0.3s; font-weight: bold; font-size: 3.5rem; transition: 0.8s;}
+.mission p span::after {display: block; content: ""; position: absolute; top: 90%; left: 0; width: 100%; height: 2px; background: #64ae87; transform: scale(0); transition: 0.5s}
+.mission .img_bx {width: 100%; height: max-content; position: relative;}
+.mission .img_bx img {width: 100%;}
+.mission .img_bx .blind {position: absolute; top: 0; left: 100%; width: 100%; height: 100%; background: #f6f6f6; transform: translate(-100%, 0); transition-delay: 0.5s; transition: 1.5s;} 
+
+
+/* about nike */
+
+.aboutnike {position: relative; padding: 10% 0;}
+.aboutnike #nikesvg {width: 30%; margin-left: 35%; margin-bottom: 7%;}
+.aboutnike #nikesvg path {stroke: #222; stroke-width: 2px;}
+.aboutnike #nikesvg .path450 {stroke-dasharray: 450; stroke-dashoffset: 450;}
+.aboutnike #nikesvg .path600 {stroke-dasharray: 625; stroke-dashoffset: 625;}
+.aboutnike #nikesvg .path710 {stroke-dasharray: 710; stroke-dashoffset: 710;}
+.aboutnike #nikesvg.move .path450 {animation: ani-path450 1.5s linear forwards;}
+.aboutnike #nikesvg.move .path600 {animation: ani-path600 1.5s linear forwards;}
+.aboutnike #nikesvg.move .path710 {animation: ani-path710 1.5s linear forwards;}
+@keyframes ani-path450 {
+    0% {stroke-dashoffset: 450;}
+    50% {stroke-dashoffset: 270;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes ani-path600 {
+    0% {stroke-dashoffset: 625;}
+    50% {stroke-dashoffset: 300;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes ani-path710 {
+    0% {stroke-dashoffset: 710;}
+    50% {stroke-dashoffset: 350;}
+    100% {stroke-dashoffset: 0;}
+}
+.aboutnike p {font-size: 1.5rem; line-height: 2rem; margin-left: 10%; width: 80%; text-align: center; transition: 1s; transform: translate(0, 100%); opacity: 0;}
+.aboutnike p:nth-of-type(2) {margin-top: 3%; transition-delay: 0.5s;}
+.aboutnike::before {display: block; content: ""; border-bottom: 5px dashed #64ae87; position: absolute; width: 90%; left: 5%; top: 2%; transition: 1.5s; transform: translate(-200%, 0);}
+.aboutnike::after {display: block; content: ""; border-bottom: 5px dashed #64ae87; position: absolute; width: 90%; right: 5%; top: 98%; transition: 1.5s; transform: translate(200%, 0); }
+
+/* box */
+
+.box {background: #a1b2a9; margin-top: 10%; padding: 15% 0;}
+.box::after {display: block; content: ""; clear: both;}
+.box > div {float: left; width: 40%; height: 51.4vw; position: relative; box-shadow: 4px 4px 5px rgba(0,0,0,0.6);  transition: all 1s; opacity: 0; transform: translate(0, 100%); overflow: hidden; cursor: pointer;}
+.box .innovation {background-image: url(../images/about-innovation.jpg); background-size: cover; margin-bottom: 6%;}
+.box .team {background-image: url(../images/about-team.jpg); background-size: cover; margin-bottom: 6%; transition-delay: 0.3s;}
+.box .social {background-image: url(../images/about-social.jpg); background-size: cover;}
+.box .sustainable {background-image: url(../images/about-sustainable.jpg); background-size: cover; transition-delay: 0.3s;}
+.box > div:nth-child(odd) {margin-left: 7%;}
+.box > div:nth-child(even) {margin-left: 6%;}
+.mobile_click {display: none; position: absolute; width: 100%; bottom: 0; background: rgba(255,255,255,0.7); text-align: center;
+    font-size: 18px; text-transform: uppercase; height: 30px; line-height: 30px; transition: 0.5s;}
+
+.box > div > span {position: absolute; background: #fff; z-index: 3;}
+.box > div > span:nth-of-type(1) {width: 0; height: 10px; left: 2.5%; top: 2%; transition: 0.3s;}
+.box > div > span:nth-of-type(2) {width: 10px; height: 0; right: 2.5%; top: 2%; transition: 0.3s; transition-delay: 0.3s;}
+.box > div > span:nth-of-type(3) {width: 0; height: 10px; right: 2.5%; bottom: 2%; transition: 0.3s; transition-delay: 0.6s;}
+.box > div > span:nth-of-type(4) {width: 10px; height: 0; left: 2.5%; bottom: 2%; transition: 0.3s; transition-delay: 0.9s;}
+
+.box .text_bx {position: relative; width: 86%; height: 89%; background: rgba(255,255,255,1); top: 5.5%; left: 7%; opacity: 0; transition: 0.8s; }
+.box .text_bx .text {width: 95%; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: 0.8s; }
+.box .text_bx .text .title {text-transform: uppercase; font-size: 1.7rem; color: #64ae87; text-align: center;line-height: 1.7rem;}
+.box .text_bx .text .bold {text-transform: uppercase; font-size: 2.2rem; text-align: center; line-height: 2.5rem; font-weight: bold; margin-top: 10%;}
+.box .text_bx .text .detail {color: #888; text-align: center; line-height: 1.7rem; font-size: 1.3rem; margin-top: 7%;}
+.box .text_bx .text span {border-bottom: 1px solid #999; cursor: pointer;}
+
+.box > div.hover > span:nth-of-type(odd) {width: 95%;}
+.box > div.hover > span:nth-of-type(even) {height: 95%;}
+.box > div.hover .text_bx {opacity: 1;}
+.box > div.hover .text {opacity: 1;}
+.box > div.hover .mobile_click {bottom: -100%;}
+.box .close {border: none; background-color: transparent; background-image: url(../images/close.png); 
+    background-position: center; background-size: cover; width: 20px; height: 20px; position: absolute; right: 5px; top: 5px; cursor: pointer; display: none; opacity: 0.5; transition: 0.2s;}
+.box .close:hover {opacity: 1;}
+
+/* head */
+
+.head {padding: 10% 0;}
+.head .mobile_click {display: none;}
+.head #headsvg {width: 50%; margin-left: 25%; margin-bottom: 5%;}
+.head #headsvg path {stroke-width: 2px; stroke: #222; }
+.head #headsvg .path500 {stroke-dasharray: 500; stroke-dashoffset: 500;}
+.head #headsvg .path650 {stroke-dasharray: 650; stroke-dashoffset: 650;}
+.head #headsvg .path720 {stroke-dasharray: 730; stroke-dashoffset: 730;}
+.head #headsvg.move .path500 {animation: ani-path500 1s linear forwards;}
+.head #headsvg.move .path650 {animation: ani-path650 1s linear forwards;}
+.head #headsvg.move .path720 {animation: ani-path730 1s linear forwards;}
+@keyframes ani-path500 {
+    0% {stroke-dashoffset: 500;}
+    50% {stroke-dashoffset: 250;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes ani-path650 {
+    0% {stroke-dashoffset: 650;}
+    50% {stroke-dashoffset: 325;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes ani-path730 {
+    0% {stroke-dashoffset: 730;}
+    50% {stroke-dashoffset: 365;}
+    100% {stroke-dashoffset: 0;}
+}
+
+.head > div {width: 80%; height: max-content; margin: 4% 10%; position: relative; transition: 1s; opacity: 0; transform: translate(0, 100%); overflow: hidden; cursor: pointer;} 
+.head > div img {width: 100%;}
+.head .overlay {width: 100%; height: 100%; background: #f6f6f6; opacity: 0; position: absolute; top: 0; left: 0; transition: 1s;}
+.head .text {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; opacity: 0; transition: 1s;}
+.head .close {border: none; background-color: transparent; background-image: url(../images/close.png); 
+    background-position: center; background-size: cover; width: 20px; height: 20px; position: absolute; right: 10px; top: 10px; cursor: pointer; display: none; opacity: 0.5; transition: 0.2s;}
+.head .close img {height: 20px;} 
+.head .close:hover {opacity: 1;}
+.head .text h2 {text-transform: uppercase; font-weight: bold; font-size: 2.7rem; line-height: 1.8rem; position: relative; margin-bottom: 3%;}
+.head .text h2 .text-wrapper {display: inline-block; position: relative; padding-top: 0.5em; padding-bottom: 0.1em;}
+.head .text h2 .text-wrapper span {display: inline-block;}
+.head .text .text-wrapper {overflow: hidden; display: inline-block;}
+.head .text .letter {display: inline-block;}
+.head .text p {line-height: 1.5rem; font-size: 1.2rem;}
+
+.head > div.hover .overlay { opacity: 0.8;}
+.head > div.hover .text { opacity: 1;}
+.head > div.hover .mobile_click {bottom: -100%;}
+.head > div.hover .close {opacity: 0.5;}
+.head > div.hover .close:hover {opacity: 1;}
+
+/* footer */
+
+.footer {padding: 5% 0; color: #fff; background: #a1b2a9;}
+.footer .copy {font-size: 2.3rem; text-align: center;}
+.footer span {display: block; content: ""; width: 80%; height: 1px; background: #fff; margin: 3% 10%;}
+.footer .guide { width: 80%; margin: 3% 10%; display: flex; justify-content: space-between;}
+.footer .guide a {display: block; font-size: 18px; position: relative;}
+.footer .guide a::after {display: block; content: ""; width: 0; height: 1px; background: #fff; margin-top: 5px; transition-duration: 0.2s;
+position: relative; left: 50%; transform: translateX(-50%);}
+.footer .guide a:hover::after {width: 100%;}
+.footer .sns {width: 30%; margin: 0 auto; display: flex; justify-content: space-between;}
+.footer .sns a {display: block; width: 50px; transform: scale(0.8); transition: all 0.2s;}
+.footer .sns a img {width: 100%;}
+.footer .sns a:hover {transform: scale(1);}
+
+@media screen and (min-width : 1025px) and (max-width: 1399px){
+    .nav {width: 40%;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+/* logo, menu icon, nav */
+
+.logo {top: 1%; left: 1%; height:2%;}
+.menu {width: 30px; height: 28px; top: 1%; right: 1%;}
+.menu > span {width: 80%; height: 4px;}
+.menu > span::after, .menu > span::before {border-radius: 4px; height: 4px;}
+.menu > span::after {top: 8px;}
+.menu > span::before {top: -8px;}
+
+.nav {width: 100%;}
+.nav > ul > li {text-align: center; padding-left: 0; font-size: 50px; line-height: 100px; height: 100px;}
+.nav > ul > li:hover {letter-spacing: 15px;}
+
+/* mission */
+
+.mission #missionsvg {width: 40%; margin-left: 30%; margin-bottom: 10%;}
+.mission p {font-size: 2.2rem; line-height: 2.7rem;}
+.mission p span {position: relative; transition: 0.3s; font-weight: bold; font-size: 2.5rem;}
+
+.mission .img_bx img {width: 140%; position: relative; left: 50%; transform: translateX(-50%);}
+
+/* box */
+
+.box > div {width: 45%; height: 57.8vw; }
+.box > div .mobile_click, .box .close {display: block;}
+.box > div:nth-child(odd) {margin-left: 3%;}
+.box > div:nth-child(even) {margin-left: 4%;}
+
+.box > div > span {display: none;}
+
+.box .text_bx .text .title {font-size: 1.2rem; line-height: 1.7rem;}
+.box .text_bx .text .bold {font-size: 1.5rem; line-height: 2rem;}
+.box .text_bx .text .detail {line-height: 1.2rem; font-size: 0.8rem;}
+
+
+/* head */
+
+.head > div {width: 90%; margin: 4% 5%;}
+.head .text h2 {font-size: 2.1rem;}
+.head .text p {line-height: 1.3rem; font-size: 1rem;}
+.head .mobile_click, .head .close {display: block;}
+
+/* footer */
+
+.footer .copy {font-size: 2rem;}
+.footer .guide a {font-size: 15px;}
+.footer .sns a {transform: scale(0.6);}
+.footer .sns a:hover {transform: scale(0.8);}
+
+}
+@media screen and (min-width: 541px) and (max-width: 767px) {
+
+/* logo, menu icon, nav */
+    
+.logo {top: 1%; left: 1%; height:2%;}
+.menu {width: 30px; height: 28px; top: 1%; right: 1%;}
+.menu > span {width: 80%; height: 4px;}
+.menu > span::after, .menu > span::before {border-radius: 4px; height: 4px;}
+.menu > span::after {top: 8px;}
+.menu > span::before {top: -8px;}
+.nav {width: 100%;}
+.nav > ul > li {text-align: center; padding-left: 0; font-size: 40px; line-height: 90px; height: 90px;}
+.nav > ul > li:hover {letter-spacing: 15px;}
+    
+.scroll img {width: 20px;}
+
+/* main */
+
+.main svg {width: 75%;}
+
+/* mission */
+
+.mission #missionsvg {width: 40%; margin-left: 30%; margin-bottom: 10%;}
+.mission p {font-size: 1.7rem; line-height: 2.2rem;}
+.mission p span {position: relative; transition: 0.3s; font-weight: bold; font-size: 2rem;}
+.mission p:nth-of-type(3) {font-size: 1.3rem; margin-top: 5%; margin-bottom: 7%;}
+.mission .img_bx img {width: 140%; position: relative; left: 50%; transform: translateX(-50%);}
+
+/* about nike */
+
+.aboutnike #nikesvg {width: 40%; margin-left: 30%; margin-bottom: 10%;}
+.aboutnike p {font-size: 1.2rem; line-height: 1.7rem; }
+
+/* box */
+
+.box > div {float: center; width: 60%; height: 60vw;}
+.box .mobile_click, .box .close {display: block;}
+.box .social {background-position: center; margin-bottom: 6%;}
+.box .sustainable {background-position: center;}
+.box > div:nth-child(odd) {margin-left: 20%;}
+.box > div:nth-child(even) {margin-left: 20%;}
+
+.box > div >  span {display: none;}
+
+.box .text_bx {width: 88%; height: 87%;top: 6.5%; left: 6%;}
+.box .text_bx .text .title {font-size: 1.2rem; line-height: 1.7rem;}
+.box .text_bx .text .bold {font-size: 1.5rem; line-height: 2rem;}
+.box .text_bx .text .detail {line-height: 1.2rem; font-size: 0.8rem;}
+
+
+/* head */
+
+.head #headsvg {width: 70%; margin-left: 15%; margin-bottom: 10%;}
+.head .mobile_click, .head .close {display: block;}
+.head > div {width: 100%; margin: 4% 0;}
+.head .text h2 {font-size: 2rem; margin-bottom: 1%;}
+.head .text p {line-height: 1.3rem; font-size: 1rem;}
+
+/* footer */
+
+.footer .copy {font-size: 1.5rem;}
+.footer span {width: 90%; margin-left: 5%;}
+.footer .guide {width: 90%; margin-left: 5%;}
+.footer .guide a {font-size: 12px;}
+.footer .sns {width: 40%; margin-left: 30%;}
+.footer .sns a {transform: scale(0.4);}
+.footer .sns a:hover {transform: scale(0.6);}
+
+}
+
+@media screen and (max-width: 540px) {
+
+/* logo, menu icon, nav */
+    
+.logo {top: 1%; left: 1%; height:2%;}
+.menu {width: 30px; height: 28px; top: 1%; right: 1%;}
+.menu > span {width: 80%; height: 4px;}
+.menu > span::after, .menu > span::before {border-radius: 4px; height: 4px;}
+.menu > span::after {top: 8px;}
+.menu > span::before {top: -8px;}
+.nav {width: 100%;}
+.nav > ul > li {text-align: center; padding-left: 0; font-size: 38px; line-height: 90px; height: 90px;}
+.nav > ul > li:hover {letter-spacing: 12px;}
+    
+.scroll img {width: 20px;}
+
+/* main */
+
+.main svg {width: 80%;}
+
+/* mission */
+
+.mission #missionsvg {width: 40%; margin-left: 30%; margin-bottom: 10%;}
+.mission p {font-size: 1.1rem; line-height: 1.6rem;}
+.mission p span {position: relative; transition: 0.3s; font-weight: bold; font-size: 1.3rem;}
+.mission p span::after {height: 1px;}
+.mission p:nth-of-type(3) {font-size: 1rem; margin-top: 5%; margin-bottom: 7%;}
+.mission .img_bx img {width: 150%; position: relative; left: 50%; transform: translateX(-50%);}
+
+/* about nike */
+
+.aboutnike {padding: 15% 0;}
+.aboutnike #nikesvg {width: 40%; margin-left: 30%; margin-bottom: 10%;}
+.aboutnike p {font-size: 0.8rem; line-height: 1.2rem; }
+.aboutnike::before {border-bottom: 2px dashed #64ae87;}
+.aboutnike::after {border-bottom: 2px dashed #64ae87;}
+
+/* box */
+
+.box > div {float: center; width: 60%; height: 60vw;}
+.box .mobile_click {display: block; height: 24px; font-size: 16px; line-height: 24px;}
+.box .close {display: block; width: 15px; height: 15px;}
+.box .team, .box .sustainable {transition-delay: 0;}
+.box .social {background-position: center; margin-bottom: 6%;}
+.box .sustainable {background-position: center;}
+.box > div:nth-child(odd) {margin-left: 20%;}
+.box > div:nth-child(even) {margin-left: 20%;}
+
+.box > div span {display: none;}
+
+.box .text_bx {width: 88%; height: 88%;top: 6%; left: 5.7%;}
+.box .text_bx .text .title {font-size: 0.8rem; line-height: 1rem;}
+.box .text_bx .text .bold {font-size: 1rem; line-height: 1.3rem;}
+.box .text_bx .text .detail {line-height: 0.8rem; font-size: 0.6rem;}
+
+
+/* head */
+
+.head #headsvg {width: 70%; margin-left: 15%; margin-bottom: 10%;}
+.head > div {width: 100%; margin: 4% 0;}
+.head .text h2 {font-size: 1.2rem; line-height: 1.2rem; margin-bottom: 1%;}
+.head .text p {line-height: 1rem; font-size: 0.8rem;}
+.head .mobile_click {display: block;  height: 24px; font-size: 16px; line-height: 24px;}
+.head .close {display: block; width: 15px; height: 15px;}
+
+/* footer */
+
+.footer .copy {font-size: 1rem;}
+.footer span {width: 90%; margin-left: 5%;}
+.footer .guide {width: 90%; margin-left: 5%;}
+.footer .guide a {font-size: 12px;}
+.footer .sns {width: 30%; }
+.footer .sns a {width: 20px;}
+.footer .guide a {font-size: 8px;}
+
+}

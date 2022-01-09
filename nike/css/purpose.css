@@ -1,0 +1,456 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a { text-decoration: none; color: inherit;}
+
+body {overflow-x: hidden;}
+body > div {overflow: hidden;}
+
+body, html { font-family: 'S-CoreDream-4Regular'; color: #222222; box-sizing: border-box;
+     width: 100%; height: 100%;  background: #f6f6f6;}
+
+/* move */
+.breaking svg:nth-of-type(1).move,
+.breaking svg:nth-of-type(2).move,
+.breaking p:nth-of-type(1).move,
+.breaking p:nth-of-type(2).move,
+.ceo p:nth-of-type(1).move,
+.ceo p:nth-of-type(2).move,
+.ceo a.move,
+.ppp > div.move,
+.report > div.move
+{transform: translate(0,0); opacity: 1;}
+
+.breaking.move .pink,
+.breaking.move .green,
+.breaking.move .blue,
+.breaking.move .emerald,
+.breaking.move .orange
+{transform: translate(0,0) scale(1.7); opacity: 1;}
+
+.ceo .line.move {transform: scale(1);}
+
+.ceo .img_bx .blind.move {width: 0;}
+
+.report span.move {transform: scale(1); transition-delay: 0.3s;}
+
+/* logo, menu icon, nav */
+
+.logo { position: fixed; top: 2%; left: 2%; height:3%; transition-duration: 0.5s;cursor: pointer; z-index: 90; opacity: 1;}
+.logo.black { opacity: 0;}
+.menu {width: 40px; height: 30px; display: block; position: fixed; top: 2%; right: 2%; z-index: 99; opacity: 0.5; transition-duration: 200ms;}
+.menu > span {display: block; transition-duration: 0.5s; border-radius: 4px; width: 100%; height: 6px; background: #fff; position: absolute; top: 50%; transform: translateY(-50%);}
+.menu > span::after, .menu > span::before {display: block; transition-duration: 0.5s; border-radius: 4px; content: ""; width: 100%; height: 6px; position: absolute; top: 0; background: #fff;}
+.menu > span::after {top: 12px;}
+.menu > span::before {top: -12px;}
+.menu:hover {opacity: 1;} 
+.menu.black > span {background: #222;}
+.menu.black > span::before {background: #222;}
+.menu.black > span::after {background: #222;}
+.menu.on > span {background: transparent;}
+.menu.on > span::before {top: 0; transform: rotate(45deg); background: #222; }
+.menu.on > span::after {top: 0; transform: rotate(-45deg); background: #222; }
+
+.nav {position: fixed; z-index: 95; top: 0; min-width: 300px; width: 30%; height: 100%; right: -100%; background: #ffffff; overflow: hidden; transition-duration: 0.6s;}
+.nav.on {right: 0;}
+
+.nav > ul { position: relative; top: 50%; width: 100%; transform: translateY(-50%);}
+.nav > ul > li {position: relative; text-align: left; padding-left: 7%; width: 100%; font-size: 40px; height: 70px; line-height: 70px; font-weight: bold; transition: 300ms;}
+.nav > ul > li:hover {letter-spacing: 10px; background-color: #222; color: #fff;}
+
+
+/* main */
+
+.main {width: 100%; height: 100%; position: relative; overflow: hidden;
+background-image: url(../images/purpose-main.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;}
+.main .overlay {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.3);}
+.main svg {position: absolute; z-index: 1; width: 65%; stroke: #fff; left: 50%; transform: translateX(-50%); bottom: 10%;}
+.main svg path {stroke: #fff; stroke-width: 2px;}
+
+/* breaking */
+.breaking {padding: 10% 0; position: relative;}
+.breaking h2 {font-size: 9rem; white-space: nowrap; font-weight: bold; position: relative;}
+.breaking h2:nth-of-type(1) {left: 0;}
+.breaking h2:nth-of-type(2) {right: 1138px;}
+.breaking p {width: 60%; margin-left: 20%; text-align: center; font-size: 30px; line-height: 40px; z-index: 1;}
+.breaking p:nth-of-type(1) {margin-top: 10%; transform: translate(0, 100%); opacity: 0; transition: 1s;}
+.breaking p:nth-of-type(2) {margin-top: 5%; margin-bottom: 10%; font-size: 25px; transform: translate(0, 100%); opacity: 0; transition: 1s;}
+.breaking svg {display: none;}
+.breaking svg:nth-of-type(1) {transform: translate(-100%, 0); opacity: 0; transition: 1s;}
+.breaking svg:nth-of-type(2) {transform: translate(100%, 0); opacity: 0; transition: 1s;}
+
+.breaking div {position: absolute; z-index: -1;}
+.breaking .pink {width: 350px; height: 350px; border-radius: 50%; background: pink; top: 17%; left: -7%; transform: translate(-100%, -100%) scale(0.5); opacity: 0; transition: 1s;}
+.breaking .green {width: 170px; height: 170px; border-radius: 50%; background: #a1e275; bottom: 20%; left: 15%; transform: translate(-100%, 100%) scale(0.5); opacity: 0; transition: 1s; transition-delay: 0.3s;}
+.breaking .blue {width: 200px; height: 200px; border-radius: 50%; background: #7889f0; top: 17%; right: 5%; transform: translate(100%, -100%) scale(0.5); opacity: 0; transition: 1s; transition-delay: 0.6s;}
+.breaking .orange {width: 250px; height: 250px; border-radius: 50%; background: #f19e0d; z-index: -2; bottom: 21%; right: -5%; transform: translate(100%, 100%) scale(0.5); opacity: 0; transition: 1s; transition-delay: 0.9s;}
+.breaking .emerald {width: 100px; height: 100px; border-radius: 50%; background: #2bc6c3; bottom: 45%; right: -3%; transform: translate(100%, 0) scale(0.5); opacity: 0; transition: 1s; transition-delay: 1.2s;}
+
+/* ceo */
+.ceo {padding: 10% 0; position: relative;}
+
+.ceo .video_bx {position: fixed; width: 100%; height: 100%; background: rgba(0,0,0,0.8); top: 0; left: 0; z-index: 10; display: none;}
+.ceo .video_bx video {width: 80%; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 3px solid #fff;}
+.ceo .video_bx button {position: absolute; border: none; width: 30px; height: 30px; opacity: 0.5; transition: 0.3s; top: 5%; right: 5%; cursor: pointer;
+background-color: transparent; background-image: url(../images/close-white.png); background-size: cover; background-position: center;}
+.ceo .video_bx button:hover {opacity: 1;}
+
+.ceo .img_bx {width: 100%; height: 41.6vw; position: relative;}
+.ceo .img_bx img {width: 100%;}
+.ceo .img_bx .blind {height: 100%; width: 50%; position: absolute; background: #f6f6f6; transition: 1s;}
+.ceo .img_bx .blind:nth-of-type(1) {top: 0; left: 0;}
+.ceo .img_bx .blind:nth-of-type(2) {top: 0; right: 0;}
+.ceo .img_bx .click_vd {position: absolute; width: 100%; text-align: center; font-size: 20px; bottom: 0; padding: 20px 0; text-transform: uppercase; color: #f6f6f6; cursor: pointer; transition: 0.5s; letter-spacing: 3px;}
+.ceo .img_bx .click_vd:hover {letter-spacing: 5px;}
+
+.ceo h4 {font-size: 28px; margin: 0 auto; text-align: center; padding-top: 10%;}
+.ceo .line {width: 80%; margin: 5% 10%; height: 1px; background: #222; display: block; transform: scale(0); transition: 1s;}
+.ceo #john {width: 40%; margin-left: 30%; margin-top: 20px;}
+
+.ceo > p {width: 60%; margin-left: 20%; text-align: center; font-size: 22px; line-height: 30px; transform: translate(0, 100%); opacity: 0; transition: 1s;}
+.ceo > p:nth-of-type(2) {margin: 3% 20%;}
+.ceo a {padding-top: 2%; display: block; color: #64ae87; font-weight: bold; text-align: center; cursor: pointer; transform: translate(0, 100%); opacity: 0; 
+    transition: 0.5s; width: max-content; margin: 0 auto; position: relative;}
+.ceo a::after {display: block; content: ""; width: 0; height: 1px; background: #64ae87; top: 110%; position: absolute; left: 41%; transform: translateX(-50%);  transition: 0.3s;}
+.ceo a:hover::after {width: 82%;}
+
+/* ppp */
+.ppp {padding: 10% 0;}
+.ppp img {width: 100%;}
+.ppp > div {width: 100%; height: 28vw; overflow: hidden; position: relative; transition: 1s; opacity: 0; transform: translate(0, 100%);}
+.ppp > div:not(last-child) {margin-bottom: 5%;}
+.ppp .scroll {position: absolute; left: 50%; transform: rotateX(0) translateX(-50%); bottom: 20px; width: 35px; cursor: pointer; transition: 0.5s; z-index: 10;}
+.ppp .scroll:nth-of-type(2) {bottom: 7px;}
+.ppp .overlay {opacity: 0; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); transition: 1.5s;}
+
+.ppp svg {position: absolute; width: 100%; top: 0; left: 0; stroke-width: 5px;}
+.ppp > div p {font-size: 30px; color: #fff; width: 100%; text-align: center;}
+.ppp > div .text_bx {opacity: 0; width: 100%; position: absolute; top: 65%; transition: 0.5s;}
+.ppp > div .learn {display: block; margin: 3% auto; font-size: 18px; line-height: 40px; border: 2px solid #fff; font-weight: bold; color: #fff; text-align: center;
+    width: 120px; height: 40px; background: rgb(255,255,255,0.3); transition: 0.5s; cursor: pointer;} 
+
+.ppp > div.show {height: 42vw; transition-delay: 1.5s;}
+.ppp > div.show .overlay {opacity: 1;}
+.ppp > div.show .text_bx {opacity: 1; transition-delay: 1.8s;}
+.ppp .learn:hover {background: #fff; color: #222;}
+.ppp > div.show .scroll {transform: rotateX(180deg) translateX(-50%); transition-delay: 1.5s;}
+
+.ppp .people.show svg .people800 {stroke-dasharray: 800; stroke-dashoffset: 800; animation: ani-people 1.5s linear forwards;}
+.ppp .people.show svg .people-e {stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: ani-e 1.5s linear forwards;}
+
+@keyframes ani-people {
+    0% {stroke-dashoffset: 800;}
+    30% {stroke-dashoffset: 400;}
+    80% {stroke-dashoffset: 0; fill: transparent;}
+    100% {stroke-dashoffset: 0; fill: rgba(255,255,255,0.7);}
+}
+@keyframes ani-e {
+    0% {stroke-dashoffset: 1200;}
+    30% {stroke-dashoffset: 600;}
+    80% {stroke-dashoffset: 0; fill: transparent;}
+    100% {stroke-dashoffset: 0; fill: rgba(255,255,255,0.7);}
+}
+
+.ppp .planet.show svg .planet800 {stroke-dasharray: 800; stroke-dashoffset: 800; animation: ani-planet800 1.5s linear forwards;}
+.ppp .planet.show svg .planet1000 {stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: ani-planet1000 1.5s linear forwards;}
+.ppp .planet.show svg .planet1200 {stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: ani-planet1200 1.5s linear forwards;}
+
+@keyframes ani-planet800 {
+    0% {stroke-dashoffset: 800;}
+    30% {stroke-dashoffset: 400;}
+    80% {stroke-dashoffset: 0; fill: transparent;}
+    100% {stroke-dashoffset: 0; fill: rgba(255,255,255,0.7);}
+}
+@keyframes ani-planet1000 {
+    0% {stroke-dashoffset: 1000;}
+    30% {stroke-dashoffset: 500;}
+    80% {stroke-dashoffset: 0; fill: transparent;}
+    100% {stroke-dashoffset: 0; fill: rgba(255,255,255,0.7);}
+}
+@keyframes ani-planet1200 {
+    0% {stroke-dashoffset: 1400;}
+    30% {stroke-dashoffset: 700;}
+    80% {stroke-dashoffset: 0; fill: transparent;}
+    100% {stroke-dashoffset: 0; fill: rgba(255,255,255,0.7);}
+}
+
+.ppp .play.show svg .play800 {stroke-dasharray: 800; stroke-dashoffset: 800; animation: ani-play800 1.5s linear forwards;}
+.ppp .play.show svg .play1000 {stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: ani-play1000 1.5s linear forwards;}
+
+@keyframes ani-play800 {
+    0% {stroke-dashoffset: 800;}
+    30% {stroke-dashoffset: 400;}
+    80% {stroke-dashoffset: 0; fill: transparent;}
+    100% {stroke-dashoffset: 0; fill: rgba(255,255,255,0.7);}
+}
+@keyframes ani-play1000 {
+    0% {stroke-dashoffset: 1000;}
+    30% {stroke-dashoffset: 500;}
+    80% {stroke-dashoffset: 0; fill: transparent;}
+    100% {stroke-dashoffset: 0; fill: rgba(255,255,255,0.7);}
+}
+
+/* report */
+.report > div {width: 40%; margin-left: 30%; text-align: center; padding: 4% 3%; transition: 1s; opacity: 0; transform: translate(0,100%);}
+.report .targets {margin-bottom: 15%;}
+.report > div > h2 {font-size: 28px; font-weight: bold; color: #64ae87; margin-bottom: 7%;}
+.report > div > p {margin-bottom: 7%; font-size: 20px; line-height: 28px;}
+.report > div > .learn {font-size: 18px; font-weight: bold; position: relative; cursor: pointer; color: #64ae87; padding: 7px 10px; border: 1px solid #64ae87; transition: 0.3s;}
+.report > div > .learn:hover {background: #64ae87; color: #fff; letter-spacing: 3px;}
+.report span {width: 80%; height: 1px; display: block; background: #222; transform: scale(0);transition: 1s; margin: 5% 10%;}
+
+/* footer */
+
+.footer {padding: 5% 0; color: #fff; background: #a1b2a9;}
+.footer .copy {font-size: 2.3rem; text-align: center;}
+.footer span {display: block; content: ""; width: 80%; height: 1px; background: #fff; margin: 3% 10%;}
+.footer .guide { width: 80%; margin: 3% 10%; display: flex; justify-content: space-between;}
+.footer .guide a {display: block; font-size: 18px; position: relative;}
+.footer .guide a::after {display: block; content: ""; width: 0; height: 1px; background: #fff; margin-top: 5px; transition-duration: 0.2s;
+position: relative; left: 50%; transform: translateX(-50%);}
+.footer .guide a:hover::after {width: 100%;}
+.footer .sns {width: 30%; margin: 0 auto; display: flex; justify-content: space-between;}
+.footer .sns a {display: block; width: 50px; transform: scale(0.8); transition: all 0.2s;}
+.footer .sns a img {width: 100%;}
+.footer .sns a:hover {transform: scale(1);}
+
+@media screen and (min-width : 1024px) and (max-width: 1399px){
+    .nav {width: 40%;}
+
+    /* breaking */
+    .breaking h2 {font-size: 7rem;}
+
+    .breaking .pink {top: 20%;}
+    .breaking .green {bottom: 20%; left: 10%;}
+    
+    .breaking.move .pink,
+    .breaking.move .green,
+    .breaking.move .blue,
+    .breaking.move .emerald,
+    .breaking.move .orange
+    {transform: translate(0,0) scale(1.2); opacity: 1;}
+
+    /* ceo */
+
+    .ceo .video_bx button {top: 15%;}
+
+    /* ppp */
+
+    .ppp > div {height: 28vw;}
+    .ppp > div.show {height: 44vw;}
+    .ppp > div .text_bx {top: 60%;}
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* logo, menu icon, nav */
+    
+    .logo {top: 1%; left: 1%; height:2%;}
+    .menu {width: 30px; height: 28px; top: 1%; right: 1%;}
+    .menu > span {width: 80%; height: 4px;}
+    .menu > span::after, .menu > span::before {border-radius: 4px; height: 4px;}
+    .menu > span::after {top: 8px;}
+    .menu > span::before {top: -8px;}
+    
+    .nav {width: 100%;}
+    .nav > ul > li {text-align: center; padding-left: 0; font-size: 50px; line-height: 100px; height: 100px;}
+    .nav > ul > li:hover {letter-spacing: 15px;}
+
+    /* breaking */
+
+    .breaking h2 {font-size: 7rem;}
+    .breaking.move .pink,
+    .breaking.move .green,
+    .breaking.move .blue,
+    .breaking.move .emerald,
+    .breaking.move .orange
+    {transform: translate(0,0) scale(1.2); opacity: 1;}
+
+    /* ceo */
+    
+    .ceo .video_bx button {top: 23%;}
+
+    /* ppp */
+
+    .ppp > div {height: 30vw;}
+    .ppp > div.show {height: 44vw;}
+    .ppp > div .text_bx {top: 60%;}
+    .ppp > div p {font-size: 20px;}
+    .ppp > div .learn {font-size: 15px; line-height: 30px; height: 30px; width: 100px;}
+    .ppp .scroll {bottom: 18px; width: 30px;}
+    .ppp .scroll:nth-of-type(2) {bottom: 7px;}
+
+    /* report */
+
+    .report > div {width: 60%; margin-left: 20%;}
+
+    /* footer */
+
+    .footer .copy {font-size: 2rem;}
+    .footer .guide a {font-size: 15px;}
+    .footer .sns a {transform: scale(0.6);}
+    .footer .sns a:hover {transform: scale(0.8);}
+}
+@media screen and (min-width:541px) and (max-width:767px){
+
+    /* logo, menu icon, nav */
+    
+    .logo {top: 1%; left: 1%; height:2%;}
+    .menu {width: 30px; height: 28px; top: 1%; right: 1%;}
+    .menu > span {width: 80%; height: 4px;}
+    .menu > span::after, .menu > span::before {border-radius: 4px; height: 4px;}
+    .menu > span::after {top: 8px;}
+    .menu > span::before {top: -8px;}
+    .nav {width: 100%;}
+    .nav > ul > li {text-align: center; padding-left: 0; font-size: 40px; line-height: 90px; height: 90px;}
+    .nav > ul > li:hover {letter-spacing: 15px;}
+    
+    .scroll img {width: 20px;}
+
+    /* main */
+
+    .main svg {width: 75%;}
+
+    /* breaking */
+
+    .breaking h2 {display: none;}
+    .breaking svg {display: block; width: 80%; margin-left: 10%;}
+    .breaking p {font-size: 18px; line-height: 25px;}
+    .breaking p:nth-of-type(2) {font-size: 16px;}
+
+    .breaking .pink {top: 5%; left: -20%;}
+    .breaking .green {bottom: 20%; left: 5%;}
+    .breaking .blue {top: 10%; right: -5%;}
+    .breaking .emerald {bottom: 45%; right: -3%;}
+    .breaking .orange {bottom: 15%; right: -10%;}
+    
+    .breaking.move .pink,
+    .breaking.move .green,
+    .breaking.move .blue,
+    .breaking.move .emerald,
+    .breaking.move .orange
+    {transform: translate(0,0) scale(1); opacity: 1;}
+
+    /* ceo */
+
+    .ceo .img_bx {width: 80%; margin-left: 10%; overflow: hidden;}
+    .ceo .img_bx img {width: 130%; transform: translateX(-10%);}
+    .ceo .img_bx .click_vd {font-size: 14px;}
+    .ceo .video_bx button {top: 30%; width: 20px; height: 20px;}
+
+    .ceo h4 {font-size: 18px;}
+    .ceo > p {width: 60%; margin-left: 20%; text-align: center; font-size: 18px; line-height: 24px;}
+
+
+    /* ppp */
+
+    .ppp > div {height: 32vw;}
+    .ppp > div.show {height: 56vw;}
+    .ppp > div .text_bx {top: 53%;}
+    .ppp > div p {font-size: 20px; line-height: 25px;}
+    .ppp > div .learn {font-size: 15px; line-height: 30px; height: 30px; width: 100px;}
+    .ppp .scroll {bottom: 16px; width: 25px;}
+    .ppp .scroll:nth-of-type(2) {bottom: 7px;}
+
+    /* report */
+
+    .report > div {width: 80%; margin-left: 7.5%;}
+
+    /* footer */
+
+    .footer .copy {font-size: 1.5rem;}
+    .footer span {width: 90%; margin-left: 5%;}
+    .footer .guide {width: 90%; margin-left: 5%;}
+    .footer .guide a {font-size: 12px;}
+    .footer .sns {width: 40%; margin-left: 30%;}
+    .footer .sns a {transform: scale(0.4);}
+    .footer .sns a:hover {transform: scale(0.6);}
+
+}
+
+@media screen and (max-width: 540px) {
+
+    /* logo, menu icon, nav */
+        
+    .logo {top: 1%; left: 1%; height:2%;}
+    .menu {width: 30px; height: 28px; top: 1%; right: 1%;}
+    .menu > span {width: 80%; height: 4px;}
+    .menu > span::after, .menu > span::before {border-radius: 4px; height: 4px;}
+    .menu > span::after {top: 8px;}
+    .menu > span::before {top: -8px;}
+    .nav {width: 100%;}
+    .nav > ul > li {text-align: center; padding-left: 0; font-size: 38px; line-height: 90px; height: 90px;}
+    .nav > ul > li:hover {letter-spacing: 12px;}
+        
+    .scroll img {width: 20px;}
+    
+    /* main */
+    
+    .main svg {width: 80%;}
+
+    /* breaking */
+
+    .breaking h2 {display: none;}
+    .breaking svg {display: block; width: 90%; margin-left: 5%;}
+    .breaking p {font-size: 16px; line-height: 23px; width: 70%; margin-left: 15%;}
+    .breaking p:nth-of-type(2) {font-size: 14px; width: 80%; margin-left: 10%;}
+
+    .breaking .pink {top: 3%; left: -40%;}
+    .breaking .green {bottom: 12%; left: 3%;}
+    .breaking .blue {top: 10%; right: -8%;}
+    .breaking .emerald {bottom: 38%; right: -7%;}
+    .breaking .orange {bottom: 5%; right: -20%;}
+    
+    .breaking.move .pink,
+    .breaking.move .green,
+    .breaking.move .blue,
+    .breaking.move .emerald,
+    .breaking.move .orange
+    {transform: translate(0,0) scale(0.8); opacity: 1;}
+
+    /* ceo */
+
+    .ceo .img_bx {height: max-content;}
+    .ceo .img_bx img {width: 130%; transform: translateX(-10%);}
+    .ceo .img_bx .click_vd {font-size: 14px;}
+    .ceo .video_bx button {top: 30%; width: 20px; height: 20px;}
+    .ceo #john {width: 60%; margin-left: 20%;}
+
+    .ceo h4 {font-size: 18px;}
+    .ceo > p {width: 80%; margin-left: 10%; text-align: center; font-size: 16px; line-height: 22px;}
+    .ceo > p:nth-of-type(2) {margin: 5% 10%;}
+    .ceo a {font-size: 15px;}
+
+    /* ppp */
+
+    .ppp > div {height: 32vw;}
+    .ppp > div.show {height: 57vw;}
+    .ppp > div .text_bx {top: 49%;}
+    .ppp > div p {font-size: 16px; line-height: 20px; width: 95%; margin-left: 2.5%;}
+    .ppp > div .learn {font-size: 14px; line-height: 22px; height: 22px; width: 100px;}
+    .ppp .scroll {bottom: 13px; width: 18px;}
+    .ppp .scroll:nth-of-type(2) {bottom: 7px;}
+
+    /* report */
+
+    .report > div {width: 80%; margin-left: 7.5%;}
+    .report > div > h2 {font-size: 20px;}
+    .report > div > p {font-size: 15px; line-height: 20px;}
+    .report > div > .learn {font-size: 14px;}
+
+    /* footer */
+
+    .footer .copy {font-size: 1rem;}
+    .footer span {width: 90%; margin-left: 5%;}
+    .footer .guide {width: 90%; margin-left: 5%;}
+    .footer .guide a {font-size: 12px;}
+    .footer .sns {width: 30%; }
+    .footer .sns a {width: 20px;}
+    .footer .guide a {font-size: 8px;}
+
+}
