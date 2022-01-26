@@ -165,12 +165,12 @@ text-transform: uppercase; position: relative; letter-spacing: 3px;}
 
 .tab_bx {display: none;}
 .tab_bx.show {display: block;}
-.graphic_bx {position: absolute; width: 500px; height: 90%; min-height: 530px; overflow: hidden; left: 50%; transform: translateX(-50%);}
+.graphic_bx {position: absolute; width: 700px; height: 90%; min-height: 700px; overflow: hidden; left: 50%; transform: translateX(-50%);}
 .graphic_bx > ul {position: relative; top: 0; left: 0; width: max-content; height: 100%;}
-.graphic_bx > ul > li { width: 500px; float: left; position: relative; top: 50%; transform: translateY(-50%); font-size: 15px;
+.graphic_bx > ul > li { width: 700px; float: left; position: relative; top: 50%; transform: translateY(-50%); font-size: 15px;
     font-weight: normal; text-align: center; }
-.graphic_bx img {display: block; max-width: 500px; max-height: 500px; position: relative; left: 50%; transform: translateX(-50%); margin-bottom: 10px;}
-.graphic_bx .graphic_title {position: relative; top: 10%; font-size: 15px; font-weight: normal; width: 500px; height: 30px;
+.graphic_bx img {display: block; max-width: 700px; max-height: 700px; position: relative; left: 50%; transform: translateX(-50%); margin-bottom: 10px;}
+.graphic_bx .graphic_title {position: relative; top: 10%; font-size: 15px; font-weight: normal; width: 700px; height: 30px;
 text-align: center; line-height: 30px;}
 
 .page3 span>img {display: block; width: 30px; opacity: 0.3; transition-duration: 200ms;}
