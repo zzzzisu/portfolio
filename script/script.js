@@ -204,7 +204,7 @@ $(function(){
 
     $(".next").on("click",function(){
         if($(".graphic_bx").is(".show")){
-            g_bx_list.animate({left:-500+"px"},"slow",function(){
+            g_bx_list.animate({left:-700+"px"},"slow",function(){
                 g_bx_list.append(g_bx_list.children(":first"));
                 g_bx_list.removeAttr("style");
             });
@@ -218,7 +218,7 @@ $(function(){
 
     $(".prev").on("click",function(){
         if ($(".graphic_bx").is(".show")) {
-            g_bx_list.css({ left: -500 + "px" });
+            g_bx_list.css({ left: -700 + "px" });
             g_bx_list.prepend(g_bx_list.children(":last"));
             g_bx_list.animate({ left: 0 },"slow");
         }else if ($(".web_bx").is(".show")) {
