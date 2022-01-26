@@ -32,3 +32,5 @@ body, html { font-family: 'S-CoreDream-4Regular'; color: #222222; box-sizing: bo
 
 .detail img {width: 100%; display: none;}
 .detail img.on {display: block;}
+
+.hollys .mac h2 {margin-bottom: 0;}
