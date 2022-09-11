@@ -134,6 +134,7 @@ iframe.move {transform: translateY(0); opacity: 1; transition: 1s;}
 .quick_list li h4 {font-size: 12px; word-break: keep-all; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); opacity: 0; transition: 0.3s;}
 .quick_list li:hover h4 {opacity: 1;}
 .quick_list svg {height: 25px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.quick_list #app path {stroke: #143481; fill: none;}
 
 #quick.on ~ .quick_list li:nth-child(1) {right: 185px; opacity: 1;}
 #quick.on ~ .quick_list li:nth-child(2) {right: 130px; opacity: 1;}
