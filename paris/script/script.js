@@ -13,7 +13,7 @@ $(function(){
 
     // scroll top reset
 
-    // $("html").animate({scrollTop:0});
+    $("html").animate({scrollTop:0});
     
     // top button
     top.click(function(){
