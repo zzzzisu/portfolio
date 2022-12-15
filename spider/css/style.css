@@ -13,15 +13,15 @@ body, html { font-family: 'KyoboHandwriting2020A'; color: #ffffff; box-sizing: b
      width: 100%; min-width: 1200px; background: #222222; overflow: hidden; }
 
 
-section {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #222; transform: translateX(100%); opacity: 0; transition: 1s; overflow: hidden;}
-section.on {transform: translateX(0); opacity: 1;}
+section {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #222; transform: translateX(100%); opacity: 0; transition: 1s; overflow: hidden; display: none;}
+section.on {transform: translateX(0); opacity: 1; display: block;}
 
 /* home */
 
 #home {background: url(../images/spider-bg.jpg) no-repeat center /cover; }
 #home #logo {width: 70%; margin-left: 15%; opacity: 0; }
-#home #stroke2 {position: absolute; width: 70%; top: 9%; left: 15%; transform: scale(1.3); opacity: 0; animation: strokeAni 1.5s; animation-delay: 1.5s;}
-#home #stroke1 {position: absolute; width: 70%; top: 9%; left: 15%; transform: scale(1.15); opacity: 0; animation: strokeAni 1s; animation-delay: 1.5s;}
+#home #stroke2 {position: absolute; width: 70%; top: 100px; left: 15%; transform: scale(1.3); opacity: 0; animation: strokeAni 1.5s; animation-delay: 1.5s;}
+#home #stroke1 {position: absolute; width: 70%; top: 100px; left: 15%; transform: scale(1.15); opacity: 0; animation: strokeAni 1s; animation-delay: 1.5s;}
 
 @keyframes strokeAni {
     0% {opacity: 0;}
@@ -39,7 +39,7 @@ section.on {transform: translateX(0); opacity: 1;}
 #nav .click {opacity: 0;}
 #nav li {margin-left: 15px; display: block; position: relative;}
 #nav a {display: block; width: 50px; height: 50px;}
-#nav img {width: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: 0.3s;}
+#nav img {width: 50px; position: absolute; top: 0; left: 0; transition: 0.3s;}
 #nav li.on img:nth-of-type(2) {opacity: 1;}
 #nav li.on img:nth-of-type(1) {opacity: 0;}
 
@@ -52,10 +52,11 @@ section.on {transform: translateX(0); opacity: 1;}
 #video .red {position: absolute; right: 0; height: 100%; width: 52%;}
 #video .spider_logo {position: absolute; bottom: 0; right: 10px; height: 100px;}
 
-#video_bx {width: 960px; height: 540px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -55%); overflow: hidden; box-shadow: 5px 5px 10px rgba(0,0,0,0.7);}
+#video_bx {width: 70%; height: 40vw; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -55%); overflow: hidden; box-shadow: 5px 5px 10px rgba(0,0,0,0.7);}
 #video_bx ul {width: 600%; position: relative; top: 0; left: 0;}
 #video_bx ul::after {display: block; content: ""; clear: both;}
 #video_bx ul li {float: left; }
+#video_bx iframe {width: 70vw; height: 40vw;}
 
 #bullets {width: 15%; position: absolute; left: 50%; bottom: 13%; transform: translateX(-50%); display: flex; justify-content: space-between;}
 #bullets li {float: left; display: block; }
@@ -66,20 +67,22 @@ section.on {transform: translateX(0); opacity: 1;}
 
 /* actor home */
 #actor svg {position: absolute; z-index: 9;}
-#actor_home {width: 65%; position: relative; left: 50%; transform: translateX(-50%); display: flex; justify-content: space-between;}
+#actor_home {width:75%; height: 100%; position: relative; left: 50%; transform: translateX(-50%); display: flex; justify-content: space-between;}
 
-#actor_home .thumb img:nth-of-type(1) {height: 100vh; display: block; filter: grayscale(1); transition: 0.5s;}
-#actor_home .thumb img:nth-of-type(2) {position: absolute; width: 70%; bottom: 3%; left: 50%; transform: translateX(-50%); opacity: 0; transition: 0.8s;}
+#actor_home .thumb img {position: absolute; width: 75%; bottom: 3%; left: 50%; transform: translateX(-50%); opacity: 0; transition: 0.8s;}
 
-#actor_home .thumb {position: relative; cursor: pointer;}
+#actor_home .thumb {position: relative; cursor: pointer; width: 30%; height: 100%; background: no-repeat center/cover; filter: grayscale(1); transition: 0.5s;}
+#actor_home .thumb_tobey {background-image: url(../images/thumb_tobey.jpg);}
+#actor_home .thumb_andrew {background-image: url(../images/thumb_andrew.jpg);}
+#actor_home .thumb_tom {background-image: url(../images/thumb_tom.jpg);}
 #actor_home .thumb span {background:#fff; position: absolute; transition: 0.5s;}
 #actor_home .thumb span:nth-of-type(1) {height: 5px; width: 0; top: 30px; left: 0;}
 #actor_home .thumb span:nth-of-type(2) {height: 5px; width: 0; bottom: 30px; right: 0;}
 #actor_home .thumb span:nth-of-type(3) {height: 0; width: 5px; top: 0; left: 30px; transition-delay: 0.3s;}
 #actor_home .thumb span:nth-of-type(4) {height: 0; width: 5px; bottom: 0; right: 30px; transition-delay: 0.3s;}
 
-#actor_home .thumb:hover img:nth-of-type(1) {filter: grayscale(0); }
-#actor_home .thumb:hover img:nth-of-type(2) {bottom: 7%; opacity: 1;}
+#actor_home .thumb:hover {filter: grayscale(0); }
+#actor_home .thumb:hover img:nth-of-type(1) {bottom: 7%; opacity: 1;}
 #actor_home .thumb:hover span:nth-of-type(1) {height: 5px; width: 100%; }
 #actor_home .thumb:hover span:nth-of-type(2) {height: 5px; width: 100%; }
 #actor_home .thumb:hover span:nth-of-type(3) {height: 100%; width: 5px; }
@@ -100,47 +103,48 @@ section.on {transform: translateX(0); opacity: 1;}
     100% {opacity: 0.2;}
 }
 
-#tobey .tobey_img {position: absolute; bottom: -2%; left: 6%; width: 42%; max-width: 900px;}
-#tobey .tobey2 {transform: translate(0,0); opacity: 0; transition: 0.5s; transition-delay: 1s;}
-#tobey .tobey3 {transform: translate(0,0); opacity: 0; transition: 0.8s; transition-delay: 1s;}
-#tobey.on .tobey2 {transform: translate(2%, -1%); opacity: 1;}
-#tobey.on .tobey3 {transform: translate(4%, -2%); opacity: 1;}
-#tobey .spider {position: absolute; top: 0; right: 2%; transform: translateY(-100%); opacity: 0; transition: 1s; transition-delay: 1.5s;}
-#tobey.on .spider,
+#tobey .tobey_img {position: absolute; transform: rotate(15deg); bottom: 0; height: 70%; right: 0;}
+#tobey .tobey2 {transform: rotate(15deg) translate(0,0); opacity: 0; transition: 0.5s; transition-delay: 1s;}
+#tobey .tobey3 {transform: rotate(15deg) translate(0,0); opacity: 0; transition: 0.8s; transition-delay: 1s;}
+#tobey.on .tobey2 {transform: rotate(15deg) translate(-2%, 1%); opacity: 1;}
+#tobey.on .tobey3 {transform: rotate(15deg) translate(-4%, 2%); opacity: 1;}
+#tobey .spider {position: absolute; top: 0; left: 7%; transform: rotateY(180deg) translateY(-100%); opacity: 0; transition: 1s; transition-delay: 1.5s;}
+#tobey.on .spider {transform: rotateY(180deg) translateY(0); opacity: 1;}
 #andrew.on .spider,
 #tom.on .spider
  {transform: translateY(0); opacity: 1;}
-#tobey .title {position: absolute; top: 6.3%; left: 12%; width: 55%; transform: rotate(7deg) translate(-1%, 5%); opacity: 0; transition: 1s; }
-#tobey #tobeysvg {top: 6.5%; left: 10%; width: 57%; transform: rotate(7deg);}
+#tobey .title {position: absolute; top: 7%; right: 6%; width: 54.5%; transform: rotate(-10deg); opacity: 0; transition: 1s; }
+#tobey #tobeysvg {top: 6.5%; right: 5%; width: 57%; transform: rotate(-10deg);}
 
-#tobey .title.play {opacity: 1; transform: rotate(7deg) translate(0,0);}
-#andrew .title.play {opacity: 1; transform: rotate(-8deg) translate(0,0);}
-#tom .title.play {opacity: 1; transform: rotate(8deg) translate(0,0);}
+#tobey .title.play {opacity: 1; transform: rotate(-10deg) translate(-10px,10px);}
+#andrew .title.play {opacity: 1; transform: rotate(-8deg) translate(-10px,10px);}
+#tom .title.play {opacity: 1; transform: rotate(8deg) translate(10px,10px);}
 
-#actor table {position: absolute;font-size: 35px; line-height: 45px; opacity: 0; transform: translateY(20%); transition: 1s; transition-delay: 0.5s;}
+#actor table {position: absolute;font-size: 30px; line-height: 40px; opacity: 0; transform: translateY(20%); transition: 1s; transition-delay: 0.5s;}
 #tobey.on table,
 #andrew.on table,
 #tom.on table {opacity: 1; transform: translateY(0);}
 #actor table th {text-transform: uppercase; font-weight: bold; width: 170px; text-align: left; letter-spacing: 5px;}
 
-#tobey table { left: 50%; top: 40%;}
-#tobey table th {padding-top: 20px; text-shadow: 3px 3px 3px rgba(0,0,0,0.7);}
-#tobey table td:nth-of-type(1) {padding-right: 30px; text-shadow: 3px 3px 3px rgba(0,0,0,0.7);}
+#tobey table { left: 10%; top: 45%; text-align: right;}
+#tobey table td {float: right; padding-bottom: 30px;}
+#tobey table th {text-shadow: 3px 3px 3px rgba(0,0,0,0.7); float: right; text-align: right;}
+#tobey table td:nth-of-type(1) {padding-left: 30px; text-shadow: 3px 3px 3px rgba(0,0,0,0.7);}
 
-.poster {position: absolute; bottom: 70px; opacity: 0; transition: 1s; transition-delay: 0.5s; transform: translateY(20%); }
+.poster {position: absolute; bottom: 80px; opacity: 0; transition: 1s; transition-delay: 0.5s; transform: translateY(20%); }
 #tobey.on .poster,
 #andrew.on .poster,
 #tom.on .poster {opacity: 1; transform: translateY(0);}
-#tobey .poster {right: 40px;}
+#tobey .poster {left: 10%;}
 .poster::after {display: block; content: ""; clear: both;}
 .poster li {float: left; position: relative; box-shadow: 5px 5px 10px rgba(0,0,0,0.7);}
 .poster li:not(:first-child) {margin-left: 40px;}
-.poster li a {display: block; width: 180px;}
-.poster li a img {display: block; width: 180px;}
+.poster li a {display: block; width: 170px;}
+.poster li a img {display: block; width: 170px;}
 
 .poster li .overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff; opacity: 0; transition: 0.5s;}
 .poster li .movie {position: absolute; top: 50%; width: 100%; transform: translateY(-50%); text-align: center;
-color: #222; font-size: 27px; line-height: 35px; font-weight: bold; transition: 0.5s; opacity: 0;}
+color: #222; font-size: 20px; line-height: 26px; font-weight: bold; transition: 0.5s; opacity: 0;}
 
 .poster li:hover .overlay {opacity: 0.75;}
 .poster li:hover .movie {opacity: 1;}
@@ -153,7 +157,7 @@ color: #222; font-size: 27px; line-height: 35px; font-weight: bold; transition: 
 #andrew.on .andrew2 {transform: translate(-1.5%,0); opacity: 1;}
 #andrew.on .andrew3 {transform: translate(-3%,0); opacity: 1;}
 #andrew .spider {position: absolute; top: 0; left: 7%; transform: translateY(-100%); opacity: 0; transition: 1s; transition-delay: 1.5s;}
-#andrew .title {position: absolute; top: 4%; right: 6.75%; width: 56%; transform: rotate(-8deg) translate(1%, -5%); opacity: 0; transition: 1s;}
+#andrew .title {position: absolute; top: 3.5%; right: 6%; width: 56.5%; transform: rotate(-8deg); opacity: 0; transition: 1s;}
 #andrew #andrewsvg {top: 5.8%; right: 5.3%; width: 57%; transform: rotate(-8deg);}
 
 #andrew table th, #andrew table td {float: right; text-align: right;}
@@ -171,8 +175,8 @@ color: #222; font-size: 27px; line-height: 35px; font-weight: bold; transition: 
 #tom .tom3 {transform: translate(0,0); opacity: 0; transition: 0.8s; transition-delay: 1s;}
 #tom.on .tom2 {transform: translate(2.5%,-0.5%); opacity: 1;}
 #tom.on .tom3 {transform: translate(5.5%,-1%); opacity: 1;}
-#tom .spider {position: absolute; top: 0; right: 10px; transform: translateY(-100%); opacity: 0; transition: 1s; transition-delay: 1.5s;}
-#tom .title {position: absolute; top: 3.8%; left: 27.8%; width: 40%; transform: rotate(8deg) translate(-1%, 3%); opacity: 0; transition: 1s;}
+#tom .spider {position: absolute; top: 0; right: 0; transform: translateY(-100%); opacity: 0; transition: 1s; transition-delay: 1.5s;}
+#tom .title {position: absolute; top: 4.5%; left: 27.5%; width: 39.5%; transform: rotate(8deg); opacity: 0; transition: 1s;}
 #tom #tomsvg {top: 7%; left: 27.6%; width: 40%; transform: rotate(8deg);}
 
 #tom table {top: 30%; left: 35%; }
@@ -195,8 +199,8 @@ color: #222; font-size: 27px; line-height: 35px; font-weight: bold; transition: 
 #film #container .main {width: 30%; float: left; margin-top: 2%; box-shadow: 5px 5px 10px rgba(0,0,0,0.7);} 
 #film #container .detail {left: 35%; position: absolute; transition: 1s; transform: translateX(100%); opacity: 0; margin-top: 3%;}
 
-#film .detail .title { font-size: 60px; font-weight: bold; margin-bottom: 15px; }
-#film .detail h4 {font-size: 30px; opacity: 0.7; padding-bottom: 15px; width: 100%; border-bottom: 1px solid #fff;}
+#film .detail .title { font-size: 50px; font-weight: bold; margin-bottom: 15px; }
+#film .detail h4 {font-size: 22px; opacity: 0.7; padding-bottom: 15px; width: 100%; border-bottom: 1px solid #fff;}
 #film .detail8::before {display: block; content: "NOW PLAYING"; background: #b72d2d; color: #fff; position: absolute; top: -9%;
 padding: 10px 20px; font-size: 25px; border-radius: 30px;}
 
@@ -211,18 +215,18 @@ padding: 10px 20px; font-size: 25px; border-radius: 30px;}
 #film .detail1 .people .more, #film .detail4 .people .more, #film .detail6 .people .more {line-height: 60px;}
 
 #film .rating {width: 100%; margin-top: 20px;}
-#film .rating img {display: block; height: 38px;float: left; margin-right: 10px;}
-#film .rating th {text-transform: uppercase; font-size: 35px; letter-spacing: 3px; transform: translateY(20px); font-weight: bold; width: 20%; height: 80px; text-align: left;}
-#film .rating td {text-align: center; font-size: 28px;line-height: 40px; padding: 0 10px; }
+#film .rating img {display: block; height: 32px;float: left; margin-right: 10px;}
+#film .rating th {text-transform: uppercase; font-size: 30px; letter-spacing: 3px; transform: translateY(20px); font-weight: bold; width: 20%; height: 70px; text-align: left;}
+#film .rating td {text-align: center; font-size: 24px;line-height: 35px; padding: 0 5px; }
 #film .rating td:not(:nth-of-type(1)) {border-left: 1px solid #fff;}
 
-#film p {width: 100%; font-size: 25px; padding-top: 20px; margin-top: 20px; line-height: 35px; border: 1px solid rgba(255,255,255,0.7); border-style: solid none; padding-bottom: 25px;}
+#film p {width: 100%; font-size: 22px; padding-top: 20px; margin-top: 20px; line-height: 30px; border: 1px solid rgba(255,255,255,0.7); border-style: solid none; padding-bottom: 25px;}
 
 #film .people {width: 100%;}
 #film .people tr {border-bottom: 1px solid rgba(255,255,255,0.7); margin-top: 25px;}
-#film .people th {text-transform: uppercase; font-size: 30px; line-height: 70px; font-weight: bold; width: 25%; height: 70px; text-align: left; letter-spacing: 3px;}
-#film .people td {font-size: 25px; line-height: 70px;}
-#film .people .more {display: block; font-size: 25px; line-height: 70px; float: right; margin-right: 10px; cursor: pointer; transition: 0.3s;}
+#film .people th {text-transform: uppercase; font-size: 25px; line-height: 50px; padding: 5px 0; font-weight: bold; width: 25%; text-align: left; letter-spacing: 3px;}
+#film .people td {font-size: 22px; }
+#film .people .more {display: block; font-size: 20px;float: right; margin-right: 10px; cursor: pointer; transition: 0.3s;}
 #film .people .more:hover {color: #b72d2d;}
 
 #film .posters {position: absolute; bottom: -1%; width: 80%; left: 12%; display: flex; justify-content: space-between;}
@@ -256,16 +260,15 @@ background: url(../images/bg-blue.png) no-repeat right /contain;}
 #news article {width: 20vw; height: 24vw; position: relative; background: #fff; text-align: center; float: left; margin: 3% 3%; transition: 1s; }
 #news article.move {opacity: 1; transform: translateY(0);}
 #news article img:nth-of-type(1) {position: absolute; width: 100%; height: 100%; top: -2%; right: -2%; filter: brightness(0.8); box-shadow: 3px 3px 5px rgba(0,0,0,0.5); transition: 1s;}
-#news article .text {position: relative; width: 95%; height: 95%; transform: translate(4.2%,0.6%); border: 2px solid #fff; transition: 1s; opacity: 0.5; }
-#news article h3 {font-size: 40px; line-height: 50px; width: 90%; margin: 7% 5%; text-shadow: 1px 1px 1px rgba(0,0,0,0.7); transition: 1s; opacity: 0; transform: translateY(10%);}
-#news article h4 {font-size: 33px; font-weight: bold; width: 85%; margin-left: 7.5%; border-top: 2px solid #fff; padding: 30px 0 10px 0; text-shadow: 1px 1px 1px rgba(0,0,0,0.7); transition: 1s; opacity: 0; transform: translateY(10%);}
-#news article h6 {font-size: 20px; text-shadow: 1px 1px 1px rgba(0,0,0,0.7); transition: 1s; opacity: 0; transform: translateY(10%);}
+#news article .text {position: relative; display: flex; align-content: center; justify-content: center; flex-direction: column; width: 95%; height: 95%; transform: translate(4.2%,0.6%); border: 2px solid #fff; transition: 1s; opacity: 0.5; }
+#news article h3 {display: block; font-size: 30px; line-height: 40px; width: 90%; margin: 7% 5%; text-shadow: 1px 1px 1px rgba(0,0,0,0.7); transition: 1s; opacity: 0; transform: translateY(10%);}
+#news article h4 {display: block; font-size: 33px; font-weight: bold; width: 85%; margin-left: 7.5%; border-top: 2px solid #fff; padding: 30px 0 10px 0; text-shadow: 1px 1px 1px rgba(0,0,0,0.7); transition: 1s; opacity: 0; transform: translateY(10%);}
+#news article h6 {display: block; font-size: 20px; text-shadow: 1px 1px 1px rgba(0,0,0,0.7); transition: 1s; opacity: 0; transform: translateY(10%);}
 #news article:last-of-type {margin-bottom: 10%;}
 
-.news4 .text {padding-top: 20%; box-sizing: border-box;}
-.news11 .text {padding-top: 10%; box-sizing: border-box;}
 
 #news article:hover .up {opacity: 0;}
 #news article:hover img:nth-of-type(1) {filter: brightness(0.3); transition-delay: 0.5s;}
 #news article:hover .text {opacity: 1; transition-delay: 0.5s;}
 #news article:hover h3,#news article:hover h4,#news article:hover h6 {opacity: 1; transform: translateY(0); transition-delay: 0.5s;}
+
