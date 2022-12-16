@@ -103,7 +103,7 @@ section.on {transform: translateX(0); opacity: 1;}
     100% {opacity: 0.2;}
 }
 
-#tobey .tobey_img {position: absolute; transform: rotate(15deg); bottom: 0; height: 70%; right: 0;}
+#tobey .tobey_img {position: absolute; transform: rotate(15deg); bottom: -3%; height: 70%; right: 0;}
 #tobey .tobey2 {transform: rotate(15deg) translate(0,0); opacity: 0; transition: 0.5s; transition-delay: 1s;}
 #tobey .tobey3 {transform: rotate(15deg) translate(0,0); opacity: 0; transition: 0.8s; transition-delay: 1s;}
 #tobey.on .tobey2 {transform: rotate(15deg) translate(-2%, 1%); opacity: 1;}
