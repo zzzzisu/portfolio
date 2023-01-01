@@ -183,10 +183,8 @@ $(document).ready(function(){
         parallax(st,$(".svg_bx"));
         parallax(st,$(".force_bx .text_bx p:nth-of-type(2)"));
         parallax(st,$(".force_bx .text_bx a"));
-        parallax(st,$(".kids-adult .kids div"));
-        parallax(st,$(".kids-adult .kids h2"));
-        parallax(st,$(".kids-adult .adult div"));
-        parallax(st,$(".kids-adult .adult h2"));
+        parallax(st,$(".kids-adult .kids"));
+        parallax(st,$(".kids-adult .adult"));
         
     });
 
