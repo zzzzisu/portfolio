@@ -168,32 +168,32 @@ right: -7px; top: 10px; transition: all 0.5s; transform: scale(0); transition-de
 
 /* kids-adult box */
 
-.kids-adult {padding: 20% 0;}
-.kids-adult img {box-shadow: 3px 3px 3px rgba(0,0,0,0.2);}
+.ka_img {border: 2px solid #fff; z-index: 10;}
+.kids-adult img {box-shadow: 0 0 5px rgba(0,0,0,0.2); transition: 1s; width: 700px;}
 
-.kids-adult .kids::after {display: block; content: ""; clear: both;}
-.kids-adult .kids div {float: right; width: 40%; border: 2px solid #fff; margin-right: 10%; transition: all 0.7s; transform: translate(100%, 0); opacity: 0;}
-.kids-adult .kids div img {width: 100%; transform: translate(100%, 0); transition: all 0.7s; transition-delay: 0.5s; opacity: 0;}
-.kids-adult .kids h2 {float: right; font-size: 6rem; text-align: right; color: #fff; margin-right: 5%; margin-top: 18%; position: relative; z-index: -1;}
-.kids-adult .kids h2 .bold {font-size: 8rem; height: 8rem; font-weight: bold;}
-.kids-adult .kids h2.move::before {width: 500%;}
-.kids-adult .kids h2.move::after {width: 500%;}
-.kids-adult .kids h2::before {display: block; content: ""; width: 0; height: 2px; background: #fff; position: absolute; top:6rem; right:260px;
-    transition-delay: 1s; transition-duration: 1s; transform: translateY(-0.7rem);}
-.kids-adult .kids h2::after {display: block; content: ""; width: 0; height: 2px; background: #fff; position: absolute; bottom: 0.5rem; left:87%;
-    transition-delay: 1s; transition-duration: 1s;}
-    
-.kids-adult .adult::after {display: block; content: ""; clear: both;}
-.kids-adult .adult div {float: left; width: 40%; border: 2px solid #fff; margin-left: 10%; transition: all 0.7s; transform: translate(-100%, 0); opacity: 0;}
-.kids-adult .adult div img {width: 100%; transform: translate(-100%, 0); transition: all 0.7s; transition-delay: 0.5s; opacity: 0;}
-.kids-adult .adult h2 {float: left; font-size:6rem; text-align: left; color: #fff; margin-left: 5%; margin-top: 18%; position: relative; z-index: -1;}
-.kids-adult .adult h2 .bold {font-size: 8rem; font-weight: bold;}
-.kids-adult .adult h2.move::before {width: 500%;}
-.kids-adult .adult h2.move::after {width: 500%;}
-.kids-adult .adult h2::before {display: block; content: ""; width: 0; height: 2px; background: #fff; position: absolute; top: 6rem; left:80px;
-    transition-delay: 1s; transition-duration: 1s; transform: translateY(-0.6rem);}
-.kids-adult .adult h2::after {display: block; content: ""; width: 0; height: 2px; background: #fff; position: absolute; bottom: 0.6rem; right:99%;
-    transition-delay: 1s; transition-duration: 1s;}
+.kids, .adult {margin: 15% 0; display: flex; justify-content: center; align-items: center;}
+.kids .ka_img {order: 2; margin-left: 5%;}
+.kids .ka_txt {order: 1; margin-left: 10%; text-align: right;}
+.kids.move img {transform: translate(-30px, 30px);}
+.kids-adult h2 {font-size: 100px; color: #fff; position: relative;}
+.kids-adult h2.bold {font-weight: 900; font-size: 130px;}
+
+.adult.move img {transform: translate(30px, -30px);}
+.adult .ka_img {margin-right: 5%;}
+.adult .ka_txt {margin-right: 10%; text-align: left;}
+
+.kids h2:nth-of-type(1)::after, .kids h2:nth-of-type(2)::after, .adult h2:nth-of-type(1)::after, .adult h2:nth-of-type(2)::after
+{display: block; content: ""; position: absolute; width: 0; height: 2px; background-color: white; transition: 1s 1s;}
+
+.kids h2:nth-of-type(1)::after {right: 275px; bottom: 18px;}
+.kids h2:nth-of-type(2)::after {left: 250px; bottom: 21px;}
+.kids.move h2:nth-of-type(1)::after {width: 500%;}
+.kids.move h2:nth-of-type(2)::after {width: 500%;}
+
+.adult h2:nth-of-type(1)::after {left: 100px; bottom: 18px;}
+.adult h2:nth-of-type(2)::after {right: 395px; bottom: 21px;}
+.adult.move h2:nth-of-type(1)::after {width: 500%;}
+.adult.move h2:nth-of-type(2)::after {width: 500%;}
     
 /* find */
 
@@ -261,13 +261,19 @@ position: relative; left: 50%; transform: translateX(-50%);}
 
 /* kids-adult box */
 
-.kids-adult .kids h2 {font-size: 5rem;}
-.kids-adult .kids h2 .bold {font-size: 7rem;}
-.kids-adult .kids h2::before {top: 5rem; right: 88%;}
+.kids-adult img {width: 500px;}
 
-.kids-adult .adult h2 {font-size: 5rem;}
-.kids-adult .adult h2 .bold {font-size: 7rem;}
-.kids-adult .adult h2::before {top: 5rem; left: 17%;}
+.kids.move img {transform: translate(-20px, 20px);}
+.kids-adult h2 {font-size: 60px;}
+.kids-adult h2.bold {font-size: 80px;}
+
+.adult.move img {transform: translate(20px, -20px);}
+
+.kids h2:nth-of-type(1)::after {right: 165px; bottom: 11px;}
+.kids h2:nth-of-type(2)::after {left: 155px; bottom: 13px;}
+
+.adult h2:nth-of-type(1)::after {left: 55px; bottom: 11px;}
+.adult h2:nth-of-type(2)::after {right: 247px; bottom: 13px;}
 
 }
 
@@ -309,15 +315,22 @@ position: relative; left: 50%; transform: translateX(-50%);}
 
 /* kids-adult box */
 
-.kids-adult .kids h2 {font-size: 4rem;}
-.kids-adult .kids h2 .bold {font-size: 5.3rem;}
-.kids-adult .kids h2::before {top: 4.2rem; right: 93%;}
-.kids-adult .kids h2::after {transform: translateY(0.1rem);}
+.kids-adult img {width: 400px;}
 
-.kids-adult .adult h2 {font-size: 4rem;}
-.kids-adult .adult h2 .bold {font-size: 5.3rem;}
-.kids-adult .adult h2::before {top: 4.2rem; left: 17%;}
-.kids-adult .adult h2::after {transform: translateY(0.1rem);}
+.kids .ka_txt {margin-left: 0;}
+.adult .ka_txt {margin-right: 0;}
+
+.kids.move img {transform: translate(-20px, 20px);}
+.kids-adult h2 {font-size: 60px;}
+.kids-adult h2.bold {font-size: 80px;}
+
+.adult.move img {transform: translate(20px, -20px);}
+
+.kids h2:nth-of-type(1)::after {right: 165px; bottom: 11px;}
+.kids h2:nth-of-type(2)::after {left: 155px; bottom: 13px;}
+
+.adult h2:nth-of-type(1)::after {left: 55px; bottom: 11px;}
+.adult h2:nth-of-type(2)::after {right: 247px; bottom: 13px;}
 
 /* find */
 
@@ -375,17 +388,25 @@ position: relative; left: 50%; transform: translateX(-50%);}
 
 /* kids-adult box */
 
-.kids-adult .kids div {margin-right: 5%; width: 45%;}
-.kids-adult .kids h2 {font-size: 3rem; margin-right: 4%;}
-.kids-adult .kids h2 .bold {font-size: 4rem;}
-.kids-adult .kids h2::before {top: 3.2rem; right: 92%;}
-.kids-adult .kids h2::after {transform: translateY(0.25rem);}
+.kids-adult img {width: 400px;}
+.kids-adult .ka_txt {margin-top: 10%;}
 
-.kids-adult .adult div {margin-left: 5%; width: 45%;}
-.kids-adult .adult h2 {font-size: 3rem; margin-left: 4%;}
-.kids-adult .adult h2 .bold {font-size: 3.5rem;}
-.kids-adult .adult h2::before {top: 3.2rem; left: 19%;}
-.kids-adult .adult h2::after {transform: translateY(0.3rem);}
+.kids, .adult {flex-direction: column;}
+.kids .ka_img {order: 1; margin-left: 0%;}
+.kids .ka_txt {order: 2; margin-left: 0%;}
+.kids.move img {transform: translate(-20px, 20px);}
+.kids-adult h2 {font-size: 70px;}
+.kids-adult h2.bold {font-size: 90px;}
+
+.adult.move img {transform: translate(20px, -20px);}
+.adult .ka_img {margin-right: 0%;}
+.adult .ka_txt {margin-right: 0%;}
+
+.kids h2:nth-of-type(1)::after {right: 190px; bottom: 12px;}
+.kids h2:nth-of-type(2)::after {left: 175px; bottom: 16px;}
+
+.adult h2:nth-of-type(1)::after {left: 65px; bottom: 12px;}
+.adult h2:nth-of-type(2)::after {right: 280px; bottom: 16px;}
 
 /* find */
 
@@ -451,18 +472,23 @@ position: relative; left: 50%; transform: translateX(-50%);}
 
 /* kids-adult box */
 
-.kids-adult .kids div {margin-right: 3%; width: 45%;}
-.kids-adult .kids h2 {font-size: 2.5rem; margin-right: 4%;}
-.kids-adult .kids h2 .bold {font-size: 3rem;}
-.kids-adult .kids h2::before {top: 2.8rem; right: 95%;}
-.kids-adult .kids h2::after {transform: translateY(0.25rem);}
+.kids-adult img {width: 300px;}
+.kids-adult .ka_txt {margin-top: 10%;}
 
-.kids-adult .adult div {margin-left: 3%; width: 45%;}
-.kids-adult .adult h2 {font-size: 2.5rem; margin-left: 4%;}
-.kids-adult .adult h2 .bold {font-size: 2.8rem;}
-.kids-adult .adult h2::before {top: 2.8rem; left: 20%;}
-.kids-adult .adult h2::after {transform: translateY(0.3rem);}
+.kids, .adult {flex-direction: column;}
+.kids .ka_img {order: 1; margin-left: 0%;}
+.kids .ka_txt {order: 2; margin-left: 0%;}
+.kids.move img {transform: translate(-20px, 20px);}
+.kids-adult h2 {font-size: 60px;}
+.kids-adult h2.bold {font-size: 80px;}
 
+.adult.move img {transform: translate(20px, -20px);}
+
+.kids h2:nth-of-type(1)::after {right: 165px; bottom: 11px;}
+.kids h2:nth-of-type(2)::after {left: 155px; bottom: 13px;}
+
+.adult h2:nth-of-type(1)::after {left: 55px; bottom: 11px;}
+.adult h2:nth-of-type(2)::after {right: 247px; bottom: 13px;}
 
 /* find */
 
