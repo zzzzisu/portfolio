@@ -234,7 +234,7 @@ anime({
     });
   });
 
-  $("#graphic_more .close").click(function(){
+  $("#graphic_more button").click(function(){
     $("#graphic_more").fadeOut();
   });
 
