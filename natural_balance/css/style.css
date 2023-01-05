@@ -302,7 +302,7 @@ input::placeholder {outline: none;}
     top: 50%; left: -5%; z-index: -3; transition: 1s;}
 #news strong.on::before {width: 110%;}
 #news_content {display: flex; justify-content: space-between; width: 60%;}
-#news input {border: none; border-bottom: 2px solid #1d366c; width: max-content; padding-left: 10px; height: 60px;}
+#news input {border: none; border-bottom: 2px solid #1d366c; width: max-content; padding-left: 10px; height: 60px; border-radius:0;}
 #news input:placeholder-shown {font-size: 22px; font-weight: normal;}
 #news #email {padding-right: 5%;}
 #pet_type {height: 60px; width: 200px; font-size: 20px; line-height: 60px; border-bottom: 2px solid #1d366c; padding: 0 10px; position: relative; color: rgba(0,0,0,0.6);}
