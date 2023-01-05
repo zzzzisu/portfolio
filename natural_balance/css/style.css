@@ -340,7 +340,7 @@ input::placeholder {outline: none;}
 
 /* 1024 */
 
-@media all and (min-width: 1024px) and (max-width: 1399px){
+@media all and (min-width: 1025px) and (max-width: 1399px){
 
     /* menu btn */
     #menu_btn {width: 40px; height: 40px;}
@@ -493,7 +493,7 @@ input::placeholder {outline: none;}
 
 /* 768 */
 
-@media all and (min-width: 768px) and (max-width: 1023px){
+@media all and (min-width: 768px) and (max-width: 1024px){
 
     /* menu */
     
