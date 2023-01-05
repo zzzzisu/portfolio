@@ -458,8 +458,8 @@ body::-webkit-scrollbar {display: none;}
     /* hello */
 
     #hello {height: 300px; margin: 50px 0;}
-    .hello_eng {font-size: 50px;}
-    .hello_kor {font-size: 40px;}
+    .hello_eng {font-size: 40px;}
+    .hello_kor {font-size: 35px;}
 
     /* about */
 
@@ -504,7 +504,7 @@ body::-webkit-scrollbar {display: none;}
     .web_bx {margin-bottom: 150px; display: block; justify-content: unset; align-items: unset;}
 
     .web_benz {margin-top: 100px;}
-    .img_bx {box-sizing: border-box; width: 100%; height: 53vw; border: 3px solid #222;}
+    .img_bx {box-sizing: border-box; width: 100%; height: 49vw; border: 3px solid #222;}
 
     .web_bx:nth-of-type(odd) .img_bx {box-shadow: -5px 5px 0 #222;}
     .web_bx:nth-of-type(even) .img_bx {box-shadow: 5px 5px 0 #222;}
@@ -524,13 +524,13 @@ body::-webkit-scrollbar {display: none;}
     #graphic {padding: 10% 4% 10% 3%; padding-right: 10%;}
     #graphic .work_title {margin-left: 0;}
 
-    .graphic_wrapper {height:300px; margin-top: 100px;}
+    .graphic_wrapper {height:350px; margin-top: 100px;}
     .graphic_works {margin: 10px;}
-    .graphic_works img {height: 230px; box-shadow: 5px 5px 0 #222;}
+    .graphic_works img {height: 200px; box-shadow: 5px 5px 0 #222;}
 
     .graphic_works .more {padding: 2px 7px 1px 7px; font-size: 14px; bottom: 20px; right: -3px; border: 3px solid #222; }
 
-    .slick-dots button {width: 15px; height: 15px; font-size: 0px; border: 3px solid #222; color: transparent; background-color: #222;}
+    .slick-dots button {width: 18px; height: 18px; font-size: 0px; border: 3px solid #222; color: transparent; background-color: #222;}
     .slick-active button {background-color: #ffe400;}
     .slick-dots li {float: left;}
     .slick-dots li:not(:first-child) {margin-left: 15px;}
