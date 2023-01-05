@@ -838,7 +838,7 @@ input::placeholder {outline: none;}
     
     /* promise */
     
-    #promise {background: url(../images/promise.jpg) fixed no-repeat left 10% bottom 0/cover;}
+    #promise {background: url(../images/promise.jpg) fixed no-repeat left 10% bottom 0/auto 100%;}
     #promise_txt {padding: 10%;}
     #promise_txt p {font-size: 16px; line-height: 22px;}
     #promise_txt p:nth-of-type(1) {margin-bottom: 50px;}
