@@ -369,10 +369,12 @@ anime({
     if($("#name").val() && $("#email").val() && $("#subject").val() && $("#message").val()){
       $(".thankyou_message").css({display:"block"});
       $("#loading").css({display:"block"});
-    }else{alert("양식을 모두 작성해주세요!")}
+    }else{alert("양식을 모두 작성해 주세요.")}
   });
 
   $(".thankyou_message .close").click(function(){
+    $("input").removeClass("fill_text").empty();
+    $("#message").removeClass("fill_text").empty();
     $(".thankyou_message").css({display:"none"});
     $(".thankyou_text").css({opacity:0});
     $(".thankyou_message .close").css({opacity:0});
