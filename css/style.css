@@ -436,7 +436,7 @@ body::-webkit-scrollbar {display: none;}
 
     /* home */
 
-    #home_bx {padding: 40% 0;}
+    #home_bx {padding: 30% 0;}
     #welcome {font-size: 38px; line-height: 40px;}
     #next img {height: 15px;}
     #next img:not(:last-child) {margin-right: 5px;}
