@@ -219,7 +219,7 @@ position: relative; left: 50%; transform: translateX(-50%);}
 .footer .sns a img {width: 100%;}
 .footer .sns a:hover {transform: scale(1);}
 
-@media screen and (min-width : 1024px) and (max-width: 1399px){
+@media screen and (min-width : 1025px) and (max-width: 1399px){
     
     .main {background: url(../images/purpose-main.jpg) no-repeat center/cover;}
     .nav {width: 40%;}
@@ -247,7 +247,7 @@ position: relative; left: 50%; transform: translateX(-50%);}
     .ppp > div.show {height: 44vw;}
     .ppp > div .text_bx {top: 60%;}
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
     /* logo, menu icon, nav */
     
