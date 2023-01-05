@@ -54,7 +54,11 @@ body::-webkit-scrollbar {display: none;}
 
 /* hello */
 
-#top_wave {width: 100%; transform: translateY(-3px);}
+#top_wave {transform: translateY(-3px);}
+#top_wave path {transform: translateX(-3px) scale(1.1);}
+
+#bottom_wave {transform: translateY(3px);}
+#bottom_wave path {transform: translateX(-3px) scale(1.1);}
 
 #hello {text-align: center; position: relative; height: 600px; margin: 100px 0; overflow: hidden;}
 #hello div {position: absolute; top: 0; width: 100%;}
