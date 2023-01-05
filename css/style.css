@@ -8,7 +8,7 @@
 
 *:focus {outline: none;}
 * {box-sizing: border-box;}
-body {font-family: 'NeoDunggeunmo'; color: #222; background: url(../images/images/background.jpg) center /70%; text-transform: uppercase;}
+body {font-family: 'NeoDunggeunmo'; color: #222; background: url(../images/background.jpg) center /70%; text-transform: uppercase;}
 a { text-decoration: none; color: inherit;}
 strong {font-weight: bold;}
 section {width: 100%;}
