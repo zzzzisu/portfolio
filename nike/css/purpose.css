@@ -377,7 +377,8 @@ position: relative; left: 50%; transform: translateX(-50%);}
 }
 
 @media screen and (max-width: 540px) {
-
+    
+    .main {background: url(../images/purpose-main.jpg) no-repeat center/cover;}
     /* logo, menu icon, nav */
         
     .logo {top: 1%; left: 1%; height:2%;}
