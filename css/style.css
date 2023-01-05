@@ -54,8 +54,6 @@ body::-webkit-scrollbar {display: none;}
 
 /* hello */
 
-#top_wave {width: 100%; transform: translateY(-1px);}
-
 #hello {text-align: center; position: relative; height: 600px; margin: 100px 0; overflow: hidden;}
 #hello div {position: absolute; top: 0; width: 100%;}
 #hello span {display: block; transform: translateY(50px); transition: 1s; opacity: 0;}
