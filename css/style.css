@@ -192,7 +192,7 @@ body::-webkit-scrollbar {display: none;}
 #submit {width: 100%; font-size: 24px; height: 70px; font-family: 'NeoDunggeunmo'; text-transform: uppercase; letter-spacing: 5px; border: none; background-color: #222; color: #fff; position: relative; cursor: pointer; box-shadow: 7px 3px 0 #fff, 5px 5px 0 #222;}
 #submit:hover {transform: translate(5px, 5px);}
 
-.thankyou_message {position: absolute; width: 100%; height: 100%; left: 0; top: 0; text-align: center; background-color: rgba(0,0,0,0.9); z-index: 10; color: #fff; display: block;}
+.thankyou_message {position: absolute; width: 100%; height: 100%; left: 0; top: 0; text-align: center; background-color: rgba(0,0,0,0.9); z-index: 10; color: #fff; display: none;}
 .thankyou_text {position: absolute; top: 50%; transform: translateY(-50%); width: 100%; opacity: 0;}
 .thankyou_eng {font-size: 50px; line-height: 60px;}
 .thankyou_kor {margin-top: 30px; font-size: 40px; line-height: 50px; display: block;}
@@ -530,10 +530,10 @@ body::-webkit-scrollbar {display: none;}
 
     .graphic_works .more {padding: 2px 7px 1px 7px; font-size: 14px; bottom: 20px; right: -3px; border: 3px solid #222; }
 
-    .slick-dots button {width: 18px; height: 18px; font-size: 0px; border: 3px solid #222; color: transparent; background-color: #222;}
+    .slick-dots button {width: 15px; height: 15px; font-size: 0px; border: 3px solid #222; color: transparent; background-color: #222;}
     .slick-active button {background-color: #ffe400;}
     .slick-dots li {float: left;}
-    .slick-dots li:not(:first-child) {margin-left: 20px;}
+    .slick-dots li:not(:first-child) {margin-left: 15px;}
 
     #graphic_more img {width: 90%; margin: 5%;}
     #graphic_more button {width: 40px; height: 40px; background-color: #000; background-size: 30px 30px;  right: 5%;}
