@@ -524,7 +524,7 @@ body::-webkit-scrollbar {display: none;}
     #graphic {padding: 10% 4% 10% 3%; padding-right: 10%;}
     #graphic .work_title {margin-left: 0;}
 
-    .graphic_wrapper {height:350px; margin-top: 100px;}
+    .graphic_wrapper {height:300px; margin-top: 100px;}
     .graphic_works {margin: 10px;}
     .graphic_works img {height: 200px; box-shadow: 5px 5px 0 #222;}
 
@@ -536,8 +536,10 @@ body::-webkit-scrollbar {display: none;}
     .slick-dots li:not(:first-child) {margin-left: 15px;}
 
     #graphic_more img {width: 90%; margin: 5%;}
-    #graphic_more button {width: 40px; height: 40px; background-color: #000; background-size: 30px 30px;  right: 5%;}
-    
+    #graphic_more button {width: 40px; height: 40px; background: none; right: 5%;}
+    #graphic_more button::before, #graphic_more button::after {display: block; content: ""; position: absolute; width: 30px; height: 5px; background: #222; border-radius: 5px; top: 50%; left: 50%;}
+    #graphic_more button::before {transform: translate(-50%, -50%) rotate(45deg);}
+    #graphic_more button::after {transform: translate(-50%, -50%) rotate(-45deg);}    
 
     /* contact */
     
