@@ -509,7 +509,7 @@ body::-webkit-scrollbar {display: none;}
     .web_bx:nth-of-type(odd) .img_bx {box-shadow: -5px 5px 0 #222;}
     .web_bx:nth-of-type(even) .img_bx {box-shadow: 5px 5px 0 #222;}
 
-    .text_bx {width: 80%; padding: 5% 0; margin-top: 50px; border: 3px solid #222;}
+    .text_bx {width: 80%; padding: 5%; margin-top: 50px; border: 3px solid #222;}
     .web_bx:nth-of-type(odd) .text_bx {box-shadow: 5px 5px 0 #222; margin-left: 10%; margin-right: 0;}
     .web_bx:nth-of-type(even) .text_bx {box-shadow: -5px 5px 0 #222; margin-right: 0; margin-left: 10%;}
 
@@ -517,7 +517,7 @@ body::-webkit-scrollbar {display: none;}
     .web_info {font-size: 16px; margin: 20px 0;}
     .web_info strong {font-size: 18px; line-height: 22px;}
     .text_bx a { font-size: 16px; line-height: 13px; padding: 7px 10px;}
-    .web_bx:not(:last-of-type) .text_bx a:last-child {margin-left: 50px;}
+    .web_bx:not(:last-of-type) .text_bx a:last-child {margin-left: 30px;}
 
     /* graphic */
 
