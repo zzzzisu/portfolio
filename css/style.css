@@ -181,10 +181,10 @@ body::-webkit-scrollbar {display: none;}
 .form_input {position: relative; width: 100%; margin-bottom: 50px; font-size: 24px; float: left;}
 .form_input:nth-child(1), .form_input:nth-child(2) {width: 45%;}
 .form_input:nth-child(2) {margin-left: 10%;}
-.form_input input {width: 100%; border-width: 0 0 2px 0; border-color: #222; height: 30px; font-size: 20px; line-height: 24px; padding-left: 10px;}
+.form_input input {width: 100%; border-width: 0 0 2px 0; border-color: #222; height: 30px; font-size: 20px; line-height: 24px; padding-left: 10px; border-radius:0;}
 .form_input label {position: absolute; left: 10px; opacity: 0.5; transition: 0.7s;}
 .form_input:nth-child(4) label {top: 10px;}
-.form_input textarea {width: 100%; resize: none; border-width: 2px; height: 200px; font-size: 20px; padding: 10px;}
+.form_input textarea {width: 100%; resize: none; border-width: 2px; height: 200px; font-size: 20px; padding: 10px; border-radius:0;}
 
 .form_input input:focus ~ label, .form_input input.fill_text ~ label {transform: translateY(-30px) !important;}
 .form_input textarea:focus ~ label, .form_input textarea.fill_text ~ label {transform: translateY(-40px) !important;}
