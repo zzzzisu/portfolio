@@ -517,7 +517,7 @@ body::-webkit-scrollbar {display: none;}
     .web_info {font-size: 16px; margin: 20px 0;}
     .web_info strong {font-size: 18px; line-height: 22px;}
     .text_bx a { font-size: 16px; line-height: 13px; padding: 7px 10px;}
-    .web_bx:not(:last-of-type) .text_bx a:last-child {margin-left: 30px;}
+    .web_bx:not(:last-of-type) .text_bx a:last-child {margin-left: 20px;}
 
     /* graphic */
 
