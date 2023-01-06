@@ -462,6 +462,7 @@ input::placeholder {outline: none;}
 
     /* promise */
 
+    #promise {background: url(../images/promise.jpg) fixed no-repeat center/cover;}
     #promise_txt {padding: 10% 15%;}
     #promise_txt p {font-size: 20px; line-height: 27px;}
     #promise_txt h2 {line-height: 200px; font-size: 40px;}
@@ -838,7 +839,7 @@ input::placeholder {outline: none;}
     
     /* promise */
     
-    #promise {background: url(../images/promise.jpg) fixed no-repeat left 10% bottom 0/auto 100%;}
+    #promise {background: url(../images/promise.jpg) fixed no-repeat left 10% bottom 0/cover;}
     #promise_txt {padding: 10%;}
     #promise_txt p {font-size: 16px; line-height: 22px;}
     #promise_txt p:nth-of-type(1) {margin-bottom: 50px;}
