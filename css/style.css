@@ -557,6 +557,8 @@ body::-webkit-scrollbar {display: none;}
 
     .form_input input:focus ~ label, .form_input input.fill_text ~ label {transform: translateY(-20px) !important;}
     .form_input textarea:focus ~ label, .form_input textarea.fill_text ~ label {transform: translateY(-30px) !important;}
+    
+    #submit {padding-right: 20px;}
 
     .thankyou_eng {font-size: 20px; line-height: 24px;}
     .thankyou_kor {font-size: 18px; line-height: 22px;}
