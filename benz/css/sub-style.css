@@ -139,7 +139,7 @@ h3.exp-title {font-size: 30px; font-weight: bold; margin: 10px 0; line-height: 2
 
 /* comfort */ 
 #comfort > .detail {margin-bottom: 15%;}
-.comfort_bx {width: 100%; display: flex; align-items: center; margin-top: -50px;}
+.comfort_bx {width: 100%; display: flex; align-items: center; margin-top: -30px;}
 .comfort_bx img {width: 45%;}
 .comfort_bx div {width: 55%; padding: 0 30px;}
 .comfort_bx .exp {margin-top: 20px; line-height: 35px;}
