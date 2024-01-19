@@ -150,25 +150,12 @@ body::-webkit-scrollbar {display: none;}
 .graphic_wrapper {width: 100%; height:700px; position: relative; margin-top: 200px;}
 .graphic_works {position: relative; margin: 20px;}
 .graphic_works img {height: 600px; box-shadow: 10px 10px 0 #222;}
-.graphic_works .more {display: block; position: absolute; color: white; padding: 5px 12px 3px 12px; font-size: 24px; bottom: 30px; right: -5px;
-    background-color: #222; cursor: pointer; border: 5px solid #222; }
-.graphic_works .more:hover {background-color: #ffe400; color: #222;}
 
 .slick-dots {position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
 .slick-dots button {width: 25px; height: 25px; border: 5px solid #222; color: transparent; background-color: #222;}
 .slick-active button {background-color: #ffe400;}
 .slick-dots li {float: left;}
 .slick-dots li:not(:first-child) {margin-left: 20px;}
-
-#graphic_more {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;  background-color: rgba(0,0,0,0.8); overflow-y: scroll; z-index: 50;}
-#graphic_more img {display: none; width: 60%; margin: 5% 20%;; box-shadow: 0 0 10px rgba(0,0,0,0.8);}
-#graphic_more button {width: 50px; height: 50px; border: none; position: fixed; background: none; margin-top: 5%; top: 0; right: 15%; cursor: pointer; opacity: 0.5;}
-#graphic_more button::before, #graphic_more button::after {display: block; content: ""; position: absolute; width: 50px; height: 7px; background: #fff; border-radius: 7px; top: 50%; left: 50%;}
-    #graphic_more button::before {transform: translate(-50%, -50%) rotate(45deg);}
-    #graphic_more button::after {transform: translate(-50%, -50%) rotate(-45deg);}    
-#graphic_more button:hover {opacity: 1; }
-
-#graphic_more::-webkit-scrollbar {display: none;}
 
 
 /* contact */
@@ -199,17 +186,13 @@ body::-webkit-scrollbar {display: none;}
 .thankyou_text {position: absolute; top: 50%; transform: translateY(-50%); width: 100%; opacity: 0;}
 .thankyou_eng {font-size: 50px; line-height: 60px;}
 .thankyou_kor {margin-top: 30px; font-size: 40px; line-height: 50px; display: block;}
-.thankyou_message .close {width: 30px; height: 30px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 20px; cursor: pointer; opacity: 0;}
-.thankyou_message .close:hover {opacity: 1;}
+.thankyou_text .close {width: 30px; height: 30px; margin-top: 50px; cursor: pointer; opacity: 0.5;}
+.thankyou_text .close:hover {opacity: 1;}
 
-#loading {width: 100px; height: 100px; border: 10px solid rgba(255,255,255,0.5); border-radius: 100px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none;}
-#loading_line {width: 100px; height: 100px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-90deg);}
-#loading_line circle {stroke:#ffe400; fill: none; stroke-width: 10px; stroke-linecap: round; stroke-dasharray: 350; animation: loading 1.5s ease-in-out infinite;}
+#loading {width: 50px; height: 50px; border: 7px solid #ffe400; border-top-color: rgba(0,0,0,0); border-radius: 100px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none; animation: loading 0.75s linear infinite;}
 
 @keyframes loading {
-    0% {stroke-dashoffset: 350;}
-    90% {stroke-dashoffset: -350;}
-    100% {stroke-dashoffset: -350;}
+    to {transform: translate(-50%, -50%) rotate(360deg);}
 }
 
 #email_bx > img {position: absolute; bottom: 0; right: 20px; height: 40%;}
