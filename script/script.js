@@ -32,7 +32,7 @@ function typingPlayer(){
 }
 
 function typingStart(){
-  const contentS = "start!";
+  const contentS = "start";
   const textS = document.querySelector("#start");
 
   textS.textContent += contentS[index++];
@@ -72,6 +72,8 @@ function typingGraphic(){
   }
 }
 
+// typing
+
 setTimeout(function(){welcomeTimer = setInterval(typingWelcome,200);},1700);
 
 setTimeout(function(){playerTimer = setInterval(typingPlayer,200);},10000);
@@ -82,10 +84,12 @@ var webTimer = 0;
 var graphicTimer = 0;
 
 $(window).scroll(function(){
-  if($(this).scrollTop() >= ($("#graphic").offset().top - $(this).outerHeight()* 0.7)){
+  var scrollTop = $(this).scrollTop()
+
+  if(scrollTop >= ($("#graphic").offset().top - $(this).outerHeight()* 0.7)){
     if(graphicTimer == 0)
     {graphicTimer = setInterval(typingGraphic,200);}
-  }else if($(this).scrollTop() >= ($("#web").offset().top - $(this).outerHeight()* 0.7)){
+  }else if(scrollTop >= ($("#web").offset().top - $(this).outerHeight()* 0.7)){
     if(webTimer == 0){webTimer = setInterval(typingWeb,200);}
   }else return;
 });
@@ -197,10 +201,15 @@ anime({
 
   $("#home_bx").animate({width:"90%"},1500);
 
+  // nav
+
   $("#nav li").click(function(){
     var navIndex = $("#nav li").index(this);
     $("html").animate({scrollTop:$("section").eq(navIndex+1).offset().top+"px"});
   });
+
+
+  // graphic slide
 
   $(".graphic_wrapper").slick({
      dots: true,
@@ -210,12 +219,22 @@ anime({
     slidesToShow: 1,
     centerMode: true,
     variableWidth: true
-  })
+  }).on('wheel',function(e){
+    e.preventDefault();
+    if($(this).is(":animated")) return;
+    
+    if(e.originalEvent.deltaX < 0){$(this).slick('slickPrev')}
+    else {$(this).slick('slickNext')};  
+  });
+
+  $(".slick-dots").addClass("clear");
+
+  // web img scroll
 
   $("#web .img_bx").hover(
     function(){
       if($(this).children("img").is(":animated")) return;
-      $(this).children("img").animate({top:($(this).children("img").outerHeight()-$(this).height())*-1},$(this).children("img").outerHeight()*0.8);
+      $(this).children("img").animate({top:($(this).children("img").outerHeight()-$(this).height()) * -1},$(this).children("img").outerHeight() * 0.8);
     },
     function(){
       if($(this).children("img").is(":animated")){$(this).children("img").stop()}
@@ -224,24 +243,11 @@ anime({
     }
   )
 
-  $(".more").click(function(){
-    var graphic_index = $(this).parent().data("slick-index");
-    $("#graphic_more").animate({scrollTop:0});
-    $("#graphic_more").find("img").css({display:"none"});
-    $("#graphic_more").find("img").eq(graphic_index).css({display:"block"});
-    $("#graphic_more").fadeIn(function(){
-      $("#graphic_more").animate({scrollTop:0});
-    });
-  });
 
-  $("#graphic_more button").click(function(){
-    $("#graphic_more").fadeOut();
-  });
-
-  $(".slick-dots").addClass("clear");
+  // email
 
   $("input").keyup(function () {
-    if ($(this).val()) {
+    if ($(this).val() != '') {
         $(this).addClass("fill_text");
     } else {
         $(this).removeClass("fill_text");
@@ -249,7 +255,7 @@ anime({
   });
 
   $("textarea").keyup(function () {
-    if ($(this).val()) {
+    if ($(this).val() != '') {
         $(this).addClass("fill_text");
     } else {
         $(this).removeClass("fill_text");
@@ -257,10 +263,14 @@ anime({
   });
 
   $("#submit").click(function(){
-    if($("#name").val() && $("#email").val() && $("#subject").val() && $("#message").val()){
-      $(".thankyou_message").css({display:"block"});
-      $("#loading").css({display:"block"});
-    }else{alert("양식을 모두 작성해 주세요.")}
+    if(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test($("#email").val()) == false)
+      {alert('[address@email.com] 형식의 이메일 주소를 입력해 주세요.');}
+      else{
+      if($("#name").val() && $("#email").val() && $("#subject").val() && $("#message").val())
+      {$(".thankyou_message").css({display:"block"});
+       $("#loading").css({display:"block"});}
+      else{alert("양식을 모두 작성해 주세요.")}
+    }
   });
 
   $(".thankyou_message .close").click(function(){
@@ -268,7 +278,6 @@ anime({
     $("#message").removeClass("fill_text").empty();
     $(".thankyou_message").css({display:"none"});
     $(".thankyou_text").css({opacity:0});
-    $(".thankyou_message .close").css({opacity:0});
     $("label").css({transform:"translateY(0)"});
   });
 
@@ -276,4 +285,3 @@ anime({
     $("html").animate({scrollTop:0},"slow");
   });
 });
-
