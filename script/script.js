@@ -223,7 +223,7 @@ anime({
     e.preventDefault();
     if($(this).is(":animated")) return;
     
-    if(e.originalEvent.deltaX < 0){$(this).slick('slickPrev')}
+    if(e.originalEvent.deltaY < 0){$(this).slick('slickPrev')}
     else {$(this).slick('slickNext')};  
   });
 
