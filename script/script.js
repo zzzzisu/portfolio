@@ -45,12 +45,12 @@ function typingStart(){
 var indexW = 0;
 
 function typingWeb(){
-  const contentW = "webworks";
+  const contentW = "publishingworks";
   const textW1 = document.querySelector("#web h1:nth-child(1)");
   const textW2 = document.querySelector("#web h1:nth-child(2)");
-  if(indexW < 3){
+  if(indexW < 10){
     textW1.textContent += contentW[indexW++];
-  }else if(indexW >=3, indexW <= contentW.length -1){
+  }else if(indexW >=10, indexW <= contentW.length -1){
     textW2.textContent += contentW[indexW++];
   }else if(indexW > contentW.length -1){
     clearInterval(webTimer);
@@ -60,12 +60,12 @@ function typingWeb(){
 var indexG = 0;
 
 function typingGraphic(){
-  const contentG = "graphicworks";
+  const contentG = "designworks";
   const textG1 = document.querySelector("#graphic h1:nth-child(1)");
   const textG2 = document.querySelector("#graphic h1:nth-child(2)");
-  if(indexG < 7){
+  if(indexG < 6){
     textG1.textContent += contentG[indexG++];
-  }else if(indexG >=7, indexG <= contentG.length -1){
+  }else if(indexG >=6, indexG <= contentG.length -1){
     textG2.textContent += contentG[indexG++];
   }else if(indexG > contentG.length -1){
     clearInterval(graphicTimer);
