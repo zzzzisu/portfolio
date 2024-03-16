@@ -312,8 +312,8 @@ body::-webkit-scrollbar {display: none;}
 
     /* graphic */
 
-    .graphic_wrapper {height:600px; margin-top: 150px;}
-    .graphic_works img {height: 500px;}
+    .graphic_wrapper {height:550px; margin-top: 150px;}
+    .graphic_works img {height: 400px;}
 
     .slick-dots button {width: 20px; height: 20px; border: 4px solid #222; }
 
@@ -334,16 +334,16 @@ body::-webkit-scrollbar {display: none;}
     #welcome {font-size: 80px; line-height: 80px;}
 
     /* nav */
-    #nav {position: fixed; top: 15%; right: 0; transform: translateX(50px); height: 70%; z-index: 40;}
+    #nav {position: fixed; top: 7%; right: 0; transform: translateX(50px); height: 86%; z-index: 40;}
     #nav ul {height: 100%; display: flex; justify-content: space-between; flex-direction: column; color: black; transition: 0.5s;}
-    #nav li {background-color: #ffe400; border-left-width: 0 !important; border: 3px solid #222; padding: 20px 5px; font-size: 30px; height: max-content; position: relative; writing-mode: vertical-lr; transform: translate(5px,0) rotate(180deg); cursor: pointer;}
+    #nav li {background-color: #ffe400; border-left-width: 0 !important; border: 3px solid #222; padding: 15px 5px; font-size: 24px; height: max-content; position: relative; writing-mode: vertical-lr; transform: translate(5px,0) rotate(180deg); cursor: pointer;}
     #nav li:hover {box-shadow: 3px 3px 0 #222, -3px 3px #222; transform: translate(0,3px) rotate(180deg);}
 
     /* hello */
 
     #hello {height: 400px;}
-    .hello_eng {font-size: 80px;}
-    .hello_kor {font-size: 70px;}
+    .hello_eng {font-size: 80px; line-height: 90px;}
+    .hello_kor {font-size: 70px; line-height: 80px;}
 
     /* about */
 
@@ -376,6 +376,8 @@ body::-webkit-scrollbar {display: none;}
 
     /* web */
 
+    #web .work_title {text-align: center;}
+
     .web_bx {margin-bottom: 200px; display: block; justify-content: unset; align-items: unset;}
 
     .img_bx {box-sizing: border-box; width: 100%; height: 51vw;}
@@ -394,6 +396,8 @@ body::-webkit-scrollbar {display: none;}
     .web_bx:not(:last-of-type) .text_bx a:last-child {margin-left: 50px;}
 
     /* graphic */
+
+    #graphic .work_title {text-align: center;}
 
     #graphic {padding: 7%; padding-right: 10%;}
     .graphic_wrapper {display: none !important;}
@@ -426,7 +430,7 @@ body::-webkit-scrollbar {display: none;}
 
     /* home */
 
-    #home_bx {padding: 30% 0;}
+    #home_bx {padding: 17% 0;}
     #welcome {font-size: 38px; line-height: 40px;}
     #next img {height: 15px;}
     #next img:not(:last-child) {margin-right: 5px;}
@@ -439,7 +443,10 @@ body::-webkit-scrollbar {display: none;}
 
     /* nav */
 
-    #nav li {font-size: 16px;}
+    #nav {position: fixed; top: 7%; right: 0; transform: translateX(50px); height: 86%; z-index: 40;}
+    #nav ul {height: 100%; display: flex; justify-content: space-between; flex-direction: column; color: black; transition: 0.5s;}
+    #nav li {background-color: #ffe400; border-left-width: 0 !important; border: 3px solid #222; padding: 10px 3px 10px 5px; font-size: 16px; height: max-content; position: relative; writing-mode: vertical-lr; transform: translate(5px,0) rotate(180deg); cursor: pointer;}
+    #nav li:hover {box-shadow: 3px 3px 0 #222, -3px 3px #222; transform: translate(0,3px) rotate(180deg);}
 
     /* hello */
 
@@ -484,12 +491,12 @@ body::-webkit-scrollbar {display: none;}
 
     /* web */
 
-    #web {padding: 150px 50px 150px 30px;}
+    #web {padding: 150px 50px 100px 30px;}
     .work_title {font-size: 60px; height: 60px; text-align: center !important;}
     #web .work_title {margin-right: 0px; }
-    .web_bx {margin-bottom: 150px; display: block; justify-content: unset; align-items: unset;}
+    .web_bx {margin-bottom: 100px; display: block; justify-content: unset; align-items: unset;}
 
-    .web_benz {margin-top: 100px;}
+    .web_benz {margin-top: 70px;}
     .img_bx {box-sizing: border-box; width: 100%; height: 49vw; border: 3px solid #222;}
 
     .web_bx:nth-of-type(odd) .img_bx {box-shadow: -5px 5px 0 #222;}
@@ -512,7 +519,7 @@ body::-webkit-scrollbar {display: none;}
     .graphic_wrapper {display: none !important;}
     .slick-dots button {display: none;}
     .graphic_wrapper_m {display: block; position: relative; margin-top: 50px;}
-    .graphic_wrapper_m .graphic_works {left: 50%; transform: translateX(-60%); width: max-content; height: 33.3vw; margin-top: 30px; overflow: hidden; border: 3px solid #222; box-shadow: 5px 5px 0 #222;}
+    .graphic_wrapper_m .graphic_works {left: 50%; transform: translateX(-55%); width: max-content; height: 33.3vw; margin-top: 30px; overflow: hidden; border: 3px solid #222; box-shadow: 5px 5px 0 #222;}
     .graphic_wrapper_m .graphic_works img {height:auto; width: 80vw;}
     
 
