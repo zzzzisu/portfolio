@@ -2,21 +2,41 @@
 // home typing
 
 var index = 0;
+var wd = $(window).width();
 
 function typingWelcome(){
   const content = "welcome tomy portfolio";
+  const content2 = "welcome tomyportfolio";
   const text1 = document.querySelector("#welcome h1:first-child");
   const text2 = document.querySelector("#welcome h1:last-child");
+  const textm1 = document.querySelector("#welcome h1:nth-child(1)");
+  const textm2 = document.querySelector("#welcome h1:nth-child(2)");
+  const textm3 = document.querySelector("#welcome h1:nth-child(3)");
 
-  if(index < 10){
-    text1.textContent += content[index++];
-  }else if(index >=10, index <= content.length -1){
-    text2.textContent += content[index++];
-  }else if(index > content.length -1){
-    clearInterval(welcomeTimer);
-    $("#next").addClass("on");
-    $("#player").addClass("on");
-    index = 0;
+  if(wd >= 768){
+    if(index < 10){
+      text1.textContent += content[index++];
+    }else if(index >=10, index <= content.length -1){
+      text2.textContent += content[index++];
+    }else if(index > content.length -1){
+      clearInterval(welcomeTimer);
+      $("#next").addClass("on");
+      $("#player").addClass("on");
+      index = 0;
+    }
+  }else{
+    if(index < 10){
+      textm1.textContent += content2[index++];
+    }else if(index >=10, index < 12){
+      textm2.textContent += content2[index++];
+    }else if(index >=12, index <= content2.length -1){
+      textm3.textContent += content2[index++];
+    }else if(index > content2.length -1){
+      clearInterval(welcomeTimer);
+      $("#next").addClass("on");
+      $("#player").addClass("on");
+      index = 0;
+    }
   }
 }
 
